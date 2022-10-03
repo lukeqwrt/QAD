@@ -1,0 +1,346 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+html{
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: Arial, Helvetica, old;
+}
+
+/* header */
+#landing #qad_logo{
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.main .mynav{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: unset !important;
+    z-index: 99;
+    /* background: #0F3460; */
+    background: #Fff;
+}
+
+.main .mynav .logo{
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+
+.main .mynav .navbar-nav .nav-item a{
+    color: #000;
+    font-weight: 600;
+    /* font-size: 1.2rem; */
+}
+.main .mynav .navbar-nav #account{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+/* landing */
+#pst-container div{
+    color: #fff;
+    font-size: 14px;
+}
+
+.main #qad_logo{
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+#landing #qad_logo{
+    height: 110px;
+    width: auto;
+    margin-right: 10px;
+}
+#landing h3{
+color: #fff;
+font-size: 28px;
+}
+#landing .brand .top_brand span,
+#landing .brand{
+    font-family: Arial, Helvetica, sans-serif !important;
+    transform: translate(0,-3px);
+}
+@font-face {
+    font-family: yourfontname; 
+    src: url("./old-english-five-font/misc/OldEngl5-5477.pfm");
+}
+#landing .brand h3{
+}
+
+
+#landing .brand .top_brand h3{
+    font-size: 34px;
+}
+#landing .brand .my_guhit{
+   width: 100%;
+   max-width: 402px;
+   height: 2px;
+   display: block;
+   background: #fff;
+   transform: translate(0px, -4px);
+}
+#landing .brand .brand_span {
+    font-size: 14px;
+color: #fff;
+}
+#landing .brand .top_brand span:nth-child(1){
+    transform: translate(0,5px);
+}
+#landing .brand .top_brand span:nth-child(2){
+    transform: translate(0,1px);
+    font-size: 20px;
+}
+
+.main #forms li{
+    list-style: none;
+
+}
+.main #forms li a{
+    color: #0F3460;
+}
+.main .mynav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+}
+.main .navbar-nav li:nth-child(8){
+    margin-left: auto;
+}
+.navbar-nav .flex-grow-last{
+
+}
+.navbar-nav .accounts{
+}
+#loginmodal #loginform{
+    display: block;
+}
+#loginmodal #success{
+    display: none;
+}
+#loginmodal.active #success{
+    display: block;
+}
+#loginmodal.active #loginform{
+    display: none;
+}
+
+#loginmodal.active #success{}
+
+.carousel-control-prev .span{
+    color: red;
+}
+.carousel .carousel-indicators #carouselExampleIndicators button{
+    background-color: red !important;
+}
+.carousel .carousel-indicators button {
+    background-color: rgb(63, 63, 63) !important;
+  }
+  .carousel .carousel-indicators .active {
+    background-color: rgb(0, 0, 0);
+  }
+  #slider .quick_links li{
+    list-style: none;
+  }
+
+  .dropdown-menu > li > a:hover {
+    background-image: none;
+    background-color: rgb(189, 189, 189);
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+/* #particles-js .content h3{
+    margin-bottom: 15px;
+} */
+#particles-js .content{
+    font-family: 'Noto Serif Georgian', serif;
+    line-height: 2;
+}
+#particles-js canvas {
+    width: 100%;height: 82% !important;
+}
+canvas{display:block;vertical-align:bottom}
+#particles-js{z-index:0;background:#000066;height:160px;position:relative}
+#particles-js .landing-content-wrapper{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;width:100%}
+#particles-js .landing-content-wrapper h2{padding:0 10px;font-family:'Raleway', sans-serif;color:rgb(230, 217, 100);font-weight:400;font-size:22px}
+#particles-js .landing-content-wrapper h2 span{color:#E31B6D;font-family:'Raleway', sans-serif;font-weight:600}@media screen and (min-width: 600px){#particles-js .landing-content-wrapper h2{font-size:43px}}
+#particles-js .landing-content-wrapper a{text-decoration:none}#particles-js .landing-content-wrapper .landing-button{margin-top:20px;font-family:'Raleway', sans-serif;color:rgb(253, 28, 28);border:2px solid rgb(255, 3, 3);padding:7px 17px;background:none;font-size:19px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:0.3s ease-in}#particles-js .landing-content-wrapper .landing-button .arrow{padding-left:18px}#particles-js .landing-content-wrapper .landing-button .arrow i{transition:0.3s ease-in;font-size:15px}#particles-js .landing-content-wrapper .landing-button:hover{border:2px solid #E31B6D;background:#E31B6D}#particles-js .landing-content-wrapper .landing-button:hover i{transform:rotateZ(90deg)}@media screen and (min-width: 600px){#particles-js .landing-content-wrapper .landing-button{padding:13px 24px}}html{scroll-behavior:smooth}
+
+
+@media screen and (max-width: 983px){
+    #landing #qad_logo{
+        height: 90px;
+        width: auto;
+        margin-right: 10px;
+    }
+    #landing h3{
+    color: #fff;
+    font-size: 21px;
+    }
+    #landing .brand .top_brand span{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 625px){
+    #landing #qad_logo{
+        height: 70px;
+        width: auto;
+        margin-right: 10px;
+    }
+    #landing h3{
+    color: #fff;
+    font-size: 21px;
+    }
+    #landing .brand .top_brand span{
+        font-size: 14px;
+    }
+}
+
+/* SITE MAP */
+.main .site-map p{
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif !important;
+
+}
+/* slider */
+.main #slider .carousel-item{
+    /* height: 300px; */
+    width: 100%;
+}
+
+/* quick links */
+
+#quick_links_section .qc_wrapper h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+#quick_links_section .qc_wrapper li{
+    border-bottom: 1px solid gray;
+    list-style: none;
+}
+#quick_links_section .qc_wrapper div{
+    cursor: pointer;
+
+}
+#quick_links_section .qc_wrapper div img{
+    height: 60px;
+    width: 100%;
+    
+}
+#quick_links_section .qc_wrapper div:nth-child(10) img{
+    height: 120px;
+    width: 150px;
+}
+#quick_links_section .qc_wrapper div:nth-child(9) img{
+    height: 120px;
+    width: 120px;
+}
+#quick_links_section .qc_wrapper li a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+/* footer */
+.main #footer .govphseal{
+    height: auto;
+    width: 100%;
+    min-width: 140px;
+}
+.main #footer{
+    display: grid;
+
+    background: #e9e9e9;
+}
+.main #footer .footer_content{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns:140px  1fr;
+}
+.main #footer .footer_content div p{
+    font-size: 10px;
+    font-weight: bold;
+    line-height: normal;
+    margin-bottom: 7px;
+}
+.main #footer .footer_content div span{
+    line-height: normal;
+    font-size: 12px;
+    line-height: normal !important;
+
+}
+.main #footer .footer_content div a{
+    margin-bottom: 5px;
+}
+.main #footer .footer_content div a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+}
+
+.main #footer .footer_content .footer_details{
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 50px;
+}
+.main #footer .footer_content .rep,
+.main #footer .footer_content .about,
+.main #footer .footer_content .gov_link{
+    width: 100%;
+    max-width: 230px;
+
+}
+.main #footer .footer_content .rep{
+    color: #999;
+}
+.main #footer .footer_content .about{
+    justify-self:center;
+}
+.main #footer .footer_content .about{
+    color: #999;
+}
+.main #footer .footer_content .gov_link {
+    justify-self: flex-end;
+
+}
+.main #footer .footer_content .gov_link .links{
+    display: flex;
+    flex-direction: column;
+}
+.main #footer .footer_content .gov_link{
+    color: #999;
+}
+.main #footer{
+    width: 100%;
+    /* max-width: 200px; */
+}
+
+.main #footer .footer_content .last{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+}

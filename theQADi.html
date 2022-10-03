@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAD</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    
+     <!-- firebase -->
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+
+     <style>
+       .main .content p{
+          font-size: 18px;
+          margin: 0;
+          margin-bottom: 1px;
+       }
+       .main .content p:nth-child(2){
+         margin-bottom: 20px;
+       }
+       .main .content p:nth-child(3){
+         font-weight: bold;
+       }
+       .main .image_wrapper{
+         padding: 20px;
+         background: rgb(219, 219, 219);
+         max-width: 1200px;
+         margin: 0 auto;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: auto auto;
+         grid-gap: 20px;
+       }
+       .main .image_wrapper .ccb_image img{
+        height: auto;
+        width: 100%;
+       }
+     </style>
+
+</head>
+<body >
+  <!-- banner -->
+  <div id="particles-js">
+
+    <div id="landing" class="container-fluid ">
+      <div class="px-3 px-lg-5" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;">
+        <div class="d-flex align-items-center">
+          <img class="me-md-3 me-lg-4" id="qad_logo" src="../img/QAD Logo FINAL.png" alt="">
+          <div class="brand  flex-grow-1">
+            <div class="top_brand d-flex flex-column">
+              <h3 class="text-light pb-0">Quality Assurance Division</h3>
+            </div>
+            <span class="my_guhit"></span>
+            <span class="brand_span mb-4">DEPARTMENT OF EDUCATION - NATIONAL CAPITAL REGION</span>
+
+          </div>
+          <div class="large-3  columns">
+            <div id="text-1" class="ear-content widget anchor widget_text">		
+                  <div class="textwidget">
+                    <div id="pst-container">
+                      <div>Philippine Standard Time:</div><div id="pst-time"></div>
+                  </div>
+                </div>
+              </div>						
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="main">
+     
+      <nav class="mynav navbar navbar-expand-lg navbar-light p-0">
+        <div class="d-flex flex-column w-100 ">
+          <div class="nav2 px-4 px-lg-5 py-0">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="time">
+                <!-- <p>time</p> -->
+              </div>
+              <ul class="navbar-nav container text-white w-100"> 
+                <li class="nav-item ms-auto me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                    About
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./about.html">About the Region</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./about.html#Organizational">About Us</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Programs and Projects</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Transparency</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Data Privacy Notice</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                    pRiMe Services
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./services.html">New Government Permit Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Renewal of Government Permit Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Government Recognition Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Tuition and Other Fees Increase Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Temporary and Permanent Closure</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Certifications</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Special Order</a></li>
+                  </ul>
+                </li>
+              
+                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                    Issuances
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./issuances.html">Regional</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                    Resources
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./resources.html">DepEd TV</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Facts and Figures</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Downloadable Files and Forms</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                     The QAD-i
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./theQADi.html">Feedback</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Citizen Client Satisfaction Survey</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Regional Directory</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Division Directory</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link active" aria-current="page" href="./faqs.html">How To</a>
+                </li>
+                <li class="nav-item justify-content-lg-end flex-grow-last  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                 <input class="px-1" type="text" placeholder="Search">
+                </li>
+
+                <!-- <div class="accounts d-flex flex-end">
+                  <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-md-3 mx-lg-2 me-lg-3">
+                    <a class="nav-link active" aria-current="page" href="./admin/admin_dashboard.html">Dashboard</a>
+                  </li>
+                  <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                    <a class="nav-link active" aria-current="page" href="./admin/admin_Accounts.html">Accounts</a>
+                  </li>
+                  <span></span>
+                  <li class="nav-item logged-out px-0">
+                    <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#" >Login</a>
+                  </li>
+                  <div class="dropdown logged-in">
+                    <button class="account btn text-dark dropdown-toggle d-flex justify-content-center align-items-center " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background: #FAD02C;">
+
+                    </button>
+           
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">My Account</a></li>
+                      <li id="logout"><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </div>
+                </div> -->
+       
+            
+                <!-- <li id="account" class="nav-item logged-in px-0">
+                  <a class="nav-link modal-trigger" data-toggle="displayAccount" data-target="displayAccount" href="#" style="display:none;">Account</a>
+                </li> -->
+             
+                <!-- <li class="nav-item logged-in px-0">
+                  <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#">Logout</a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+          <div class="site-map">
+            <p>YOU ARE HERE. Talk To Us</p>
+          </div>
+          <div class="container content pt-4 mb-3">
+            <h3> Talk To Us</h3>
+            <p>For comments, suggestions, queries, and further information:</p>
+            <p>Quality Assurance Division</p>
+            <p>DepEd NCR, Misamis St. Bago Bantay, Quezon City</p>
+            <p>(+63-2) 9821 5630</p>
+          </div>
+          <div class="container pb-5">
+            <div class="row">
+              <div class="col-md-6">
+                <form class="qadform">
+                  <div class="col-md-5">
+                    <div class="mb-3">
+                      <label for="Name" class="form-label fw-bold">Name</label>
+                      <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" >
+                    </div>
+                    <div class="mb-3">
+                      <label for="Email" class="form-label fw-bold">Email *</label>
+                      <input type="Email" class="form-control" id="Email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Subject" class="form-label fw-bold">Subject</label>
+                      <input type="text" class="form-control" id="Subject" >
+                    </div>
+                    <label for="" class="form-label fw-bold">Type Of Concern (Please Choose One)</label>
+                    <div class="mb-2 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Query</label>
+                    </div>
+                    <div class="mb-2 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Complaint / Feedback</label>
+                    </div>
+                    <div class="mb-2 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Suggestion</label>
+                    </div>
+                    <div class="mb-2 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Request</label>
+                    </div>
+                    <div class="mb-2 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Other Concern</label>
+                    </div>
+                    <div class="mb-3">
+                      <label for="Concern" class="form-label fw-bold">Other Concern</label>
+                      <input type="text" class="form-control" id="Concern" required>
+                    </div>
+                    <label for="" class="form-label fw-bold">Message</label>
+                    <div class="form-floating mb-3">
+                      <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
+                      <!-- <label for="floatingTextarea2">Comments</label> -->
+                    </div>
+    
+                    <button type="submit" class="btn" style="background: rgb(190, 190, 190);">Submit</button>
+                  </div>
+     
+                </form>
+              </div>
+              <div class="col-md-6 d-flex flex-column justify-content-lg-end">
+                <div class="map_wrapper  border border-1 mb-5">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9629113044025!2d121.02656901484093!3d14.6580462897659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6e39d622f61%3A0x91c5f879df0a26f4!2sDepartment%20of%20Education%20-%20NCR%20Regional%20Office!5e0!3m2!1sen!2sph!4v1664782091443!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+
+        <!-- footer -->
+
+        <div id="footer" class="container-fluid mt-3 py-4 px-2 px-lg-5">
+          <div class="footer_content">
+            <div class="seal">
+              <img class="govphseal" src="./img/govph seal.png" alt="">
+            </div>
+            <div class="footer_details">
+              <div class="rep">
+                <p>REPUBLIC OF THE PHILIPPINES</p>
+                <span>All content is in the public domain unless otherwise stated.</span>
+              </div>
+              <div class="about">
+                <p>ABOUT GOVPH</p>
+                <span>Learn more about the Philippine government, its structure, how government works and the people behind it.</span>
+                <div class="gov_footer mt-3 d-flex flex-column">
+                  <a href="https://www.gov.ph/">GOV.PH</a>
+                  <a href="https://www.officialgazette.gov.ph/">Official Gazette</a>
+                  <a href="https://data.gov.ph/index/home">Open Data Portal</a>
+                </div>
+      
+              </div>
+              <div class="gov_link">
+                <div class="links">
+                  <p>GOVERNMENT LINKS</p>
+                  <a href="https://op-proper.gov.ph/">Office of the President</a>
+                  <a href="https://ovp.gov.ph/">Office of the Vice President</a>
+                  <a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a>
+                  <a href="https://sc.judiciary.gov.ph/">Supreme Court</a>
+                  <a href="http://ca.judiciary.gov.ph/">Court of Appeals</a>
+                  <a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a>
+                </div>
+          
+              </div>
+            </div>
+              <span class="last">
+                Managed by DepEd NCR Quality Assurance Division (QAD)
+              </span>
+          </div>
+      </div>
+
+
+    </div>
+ 
+    </div>
+    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div id="loginform" class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="login-form">
+              <div class="form-group">
+                <label for="login-email">Email address</label>
+                <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Email Address" required>
+              </div>
+              <div class="form-group">
+                <label for="login-password">Password</label> 
+                <input type="password" class="form-control" id="login-password" placeholder="Choose Password" required>
+                <p class="error text-danger"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn text-white" style="background: #0F3460;">Log In</button>
+                
+              </div>
+            </form>
+          </div>
+      
+        </div>
+        <div id="success" class="modal-content">
+          <div class="p-2 px-3 d-flex justify-content-between align-items-center">
+            <h3 class="m-0">Success 
+            </h3>
+            <i class="fa fa-check-square text-success" style="font-size:48px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var config = {
+      apiKey: "AIzaSyAsc9VH1T4NCmdoE6YoV4ES5nQlvdiLXOI",
+      authDomain: "qad-33bed.firebaseapp.com",
+      projectId: "qad-33bed",
+      storageBucket: "qad-33bed.appspot.com",
+      messagingSenderId: "781570120119",
+      appId: "1:781570120119:web:d67f78d8ea79347954f032",
+      measurementId: "G-KK2WSW2HSF"
+    };
+
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+
+    db.settings({ timestampsInSnapshots: true });
+
+</script>
+<script type="text/javascript" id="gwt-pst">
+  (function(d, eId) {
+    var js, gjs = d.getElementById(eId);
+    js = d.createElement('script'); js.id = 'gwt-pst-jsdk';
+    js.src = "//gwhs.i.gov.ph/pst/gwtpst.js?"+new Date().getTime();
+    gjs.parentNode.insertBefore(js, gjs);
+  }(document, 'gwt-pst'));
+  
+  var gwtpstReady = function(){
+    var firstPst = new gwtpstTime('pst-time');
+  }
+  </script>
+<!-- <script src="./fb.js"></script> -->
+<!-- <script src="./auth.js"></script> -->
+
+  <script src="./particles.js"></script>
+  <script src="./app.js"></script>
+  
+	<script src="./js/jquery.min.js"></script> 
+   <!-- <script src="./js/popper.js"></script>
+  <script src="./js/bootstrap.min.js"></script> -->
+   <script src="./js/main.js"></script> 
+  <!-- firebase -->
+
+</body>
+</html>

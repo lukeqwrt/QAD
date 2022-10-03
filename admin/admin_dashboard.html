@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="../bootstrap.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+     <!-- gsap -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" defer></script>
+     <!-- firebase -->
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+     
+</head>
+<body>
+  <div class="main">
+    <nav id="navigation" class="mynav  navbar navbar-expand navbar-dark bg-dark" style="z-index: 1;">
+      <div class="container-fluid d-flex justify-content-start">
+        <a class="logo navbar-brand" href="#" >
+          <img id="qad_logo" src="../img/QAD Logo FINAL.png" alt="">
+          QAD
+        </a>
+        <button type="button" id="sidebarCollapse" class="btn btn-dark btn btn-link btn-sm ms-0 ms-md-2 ms-lg-0 order-1 order-md-0 ">
+          <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="ms-auto order-sm-0" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-white d-flex align-items-left align-items-lg-center"> 
+            <!-- <li class="nav-item me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li> -->
+            <!-- <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-md-3 mx-lg-2 me-lg-3">
+              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+            </li>
+            <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+              <a class="nav-link active" aria-current="page" href="./admin_Accounts.html">Accounts</a>
+            </li> -->
+            <span></span>
+            <li class="nav-item logged-out px-0">
+              <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#" >Login</a>
+            </li>
+        
+            <!-- <li id="account" class="nav-item logged-in px-0">
+              <a class="nav-link modal-trigger" data-toggle="displayAccount" data-target="displayAccount" href="#" style="display:none;">Account</a>
+            </li> -->
+            <div class="dropdown rounded-3 logged-in nav-item dropdown">
+              <div class="account background-none nav-link dropdown-toggle dropdown-toggle d-flex justify-content-center align-items-center " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background: none;">
+                <svg class="svg-inline--fa fa-user fa-fw" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="" style="height: 17px;"><path fill="currentColor" d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z" style="height: 10px;"></path></svg>
+              </div>
+    
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Login As: <span id="email_span"></span></a></li>
+                <li><a class="dropdown-item" href="#">My Account</a></li>
+                <li id="logout"><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+            <!-- <li class="nav-item logged-in px-0">
+              <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#">Logout</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+        <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div id="loginform" class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="login-form">
+                  <div class="form-group">
+                    <label for="login-email">Email address</label>
+                    <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Email Address" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="login-password">Password</label> 
+                    <input type="password" class="form-control" id="login-password" placeholder="Choose Password" required>
+                    <p class="error text-danger"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn text-white" style="background: #0F3460;">Log In</button>
+                    
+                  </div>
+                </form>
+              </div>
+          
+            </div>
+            <div id="success" class="modal-content">
+              <div class="p-2 px-3 d-flex justify-content-between align-items-center">
+                <h3 class="m-0">Success 
+                </h3>
+                <i class="fa fa-check-square text-success" style="font-size:48px;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div id="loginform" class="modal-content">
+              <div id="success" class="modal-content">
+                <div class="p-2 px-3 d-flex justify-content-between align-items-center">
+                  <h3 class="m-0">Success 
+                  </h3>
+                  <i class="fa fa-check-square text-success" style="font-size:48px;"></i>
+                </div>
+              </div>
+          </div>
+        </div>
+        </div>
+        <!-- pt-4 px-2 -->
+        <nav id="sidebar" class="sidebar  navbar-dark sb-sidenav-dark bg-dark"  style="width: 225px;box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; ">
+          <ul class="list-unstyled navbar-nav ps-0">
+            <li class="mt-4 px-4 w-100 mb-1 nav-item">
+              <div class="nav-link align-items-center" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                Overview Reports
+              </div>
+            
+            </li>
+            <li class="px-4 w-100 mb-1 nav-item">
+              <div class="nav-link align-items-center" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                Update Forms
+              </div>
+            
+            </li>
+            <li class="px-4 w-100 mb-1 nav-item">
+              <div class="nav-link align-items-center" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                Add Events
+              </div>
+            
+            </li>
+            <li class="px-4 w-100 mb-1 nav-item">
+              <div class=" nav-link align-items-center" data-bs-toggle="collapse" data-bs-target="#Accounts" aria-expanded="true" style="font-size: 17px;">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                Accounts
+              </div>
+              <div class="collapse" id="Accounts"  style="transition: 0.3s ease;">
+                <ul class="sidebar_ul navbar-nav navbar-dark list-unstyled fw-normal pb-1 small">
+                  <li class="px-2 list-group-item border-0 sidebar_li nav-item" style="background: none;"><a data-bs-toggle="collapse " data-bs-target="#create_accounts" href="./admin_Accounts.html" class="rounded nav-link p-0">Create School Accounts</a></li>
+                  <li class="px-2 list-group-item border-0 sidebar_li" style="background: none;"><a href="./school_details.html" class="rounded nav-link p-0 text-decoration-none">School</a></li>
+                  <li class="px-2 list-group-item border-0 sidebar_li" style="background: none;"><a href="#" class="rounded nav-link p-0 text-decoration-none">Admin</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded text-light" data-bs-toggle="collapse" data-bs-target="#Dashboard-collapse" aria-expanded="true" style="font-size: 17px;">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                Dashboard
+              </button>
+              <div class="collapse" id="Dashboard-collapse" style="">
+                <ul class="sidebar_ul btn-toggle-nav list-unstyled fw-normal pb-1 small" >
+                  <li class="px-4 mt-1 list-group-item border-0" style="background: none;"><a href="#" class="rounded text-light" style="text-decoration:none;">Overview</a></li>
+                  <li class="px-4 list-group-item border-0" style="background: none;"><a href="#" class="rounded text-light" style="text-decoration:none;">Updates</a></li>
+                  <li class="px-4 list-group-item border-0" style="background: none;"><a href="#" class="rounded text-light" style="text-decoration:none;">Reports</a></li>
+
+                </ul>
+              </div>
+            </li> -->
+            <li class="px-4 w-100 mb-1 nav-item">
+              <div class="nav-link align-items-center" data-bs-toggle="collapse" data-bs-target="#Pages" aria-expanded="true">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                Website Pages
+              </div>
+              <div class="collapse" id="Pages" style="transition: 0.3s ease;">
+                <ul class="sidebar_ul btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li class="px-2 list-group-item border-0 sidebar_li nav-item" style="background: none;"><a href="../index.html" class="rounded nav-link p-0">Home</a></li>
+                  <li class="px-2 list-group-item border-0" style="background: none;"><a href="#" class="rounded nav-link p-0 text-decoration-none">Dashboard</a></li>
+
+                </ul>
+              </div>
+            </li>
+            <!-- <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                Dashboard
+              </button>
+              <div class="collapse" id="dashboard-collapse" style="">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark rounded">Overview</a></li>
+                  <li><a href="#" class="link-dark rounded">Weekly</a></li>
+                  <li><a href="#" class="link-dark rounded">Monthly</a></li>
+                  <li><a href="#" class="link-dark rounded">Annually</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                Orders
+              </button>
+              <div class="collapse" id="orders-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark rounded">New</a></li>
+                  <li><a href="#" class="link-dark rounded">Processed</a></li>
+                  <li><a href="#" class="link-dark rounded">Shipped</a></li>
+                  <li><a href="#" class="link-dark rounded">Returned</a></li>
+                </ul>
+              </div>
+            </li> -->
+            <li class="border-top my-3 mx-3"></li>
+            <li class="px-4 w-100 mb-1 nav-item">
+              <div class="nav-link align-items-center" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                Account
+              </div>
+              <div class="collapse" id="account-collapse" style="transition: 0.3s ease;">
+                <ul class="sidebar_ul btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li class="px-2 list-group-item border-0 sidebar_li nav-item"style="background:none;"><a href="#" class="rounded nav-link p-0 text-decoration-none">New AdminAccount</a></li>
+                  <li class="px-2 list-group-item border-0 sidebar_li nav-item" style="background:none;"><a href="#" class="rounded nav-link p-0 text-decoration-none">Profile</a></li>
+                  <li class="px-2 list-group-item border-0 sidebar_li nav-item" style="background:none;"><a href="#" class="rounded nav-link p-0 text-decoration-none">Settings</a></li>
+                  <li class="px-2 list-group-item border-0 sidebar_li nav-item" style="background:none;"><a href="#" class="rounded nav-link p-0 text-decoration-none">Sign out</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="container-fluid main_content" id="content">
+          <div class="content_wrapper pt-4 px-3">
+           <h3>Overview Reports</h3>
+          </div>
+        </div>
+
+</div>
+
+
+    <script>
+      var config = {
+      apiKey: "AIzaSyAsc9VH1T4NCmdoE6YoV4ES5nQlvdiLXOI",
+      authDomain: "qad-33bed.firebaseapp.com",
+      projectId: "qad-33bed",
+      storageBucket: "qad-33bed.appspot.com",
+      messagingSenderId: "781570120119",
+      appId: "1:781570120119:web:d67f78d8ea79347954f032",
+      measurementId: "G-KK2WSW2HSF"
+    };
+
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+
+    db.settings({ timestampsInSnapshots: true });
+
+    const toggle = document.querySelector('#sidebarCollapse')
+    const sidebar = document.querySelector('#sidebar')
+    toggle.addEventListener('click' , () => {
+      toggle.classList.toggle('active')
+      sidebar.classList.toggle('active')
+    })
+
+//     $('.dropdown').on('show.bs.dropdown', function() {
+//   $('body').append($('.dropdown').css({
+//     position: 'absolute',
+//     left: $('.dropdown').offset().left,
+//     top: $('.dropdown').offset().top
+//   }).detach());
+// });
+    </script>
+    <script src="./admin_account.js"></script>
+
+    <script src="./admin_auth.js"></script>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

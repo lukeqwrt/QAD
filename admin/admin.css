@@ -1,0 +1,62 @@
+
+.main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 56px 1fr;
+
+}
+#navigation{
+    height: 56px;
+    grid-row: 1/2;
+/* z-index: 1; */
+z-index: 99;
+}
+
+#sidebar{
+    grid-row: 2/3;
+    background: #fff;
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+#sidebar.active{
+    margin-left: -280px;
+}
+.sidebar_ul li{
+    cursor: pointer;
+}
+.sidebar_ul li a{
+   font-size: 15px;
+}
+
+.sidebar_ul li:hover > a{
+    color: #fff;
+}
+
+#content{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+/* .sidebar_li:hover {
+    background: pink;
+} */
+.nav-item{
+    cursor: pointer;
+}
+.account{
+    border-radius: 100px;
+}
+.main #navigation .logo {
+    width: 220px;
+}
+.main #navigation #qad_logo{
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+@media screen and (max-width: 574px){
+    .main #navigation .logo {
+        width: unset;
+    }
+}

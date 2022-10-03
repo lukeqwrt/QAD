@@ -1,0 +1,42 @@
+      <nav id="navigation" class="mynav navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-3" style="background: #0F3460; z-index: 1;">
+        <div class="container-fluid">
+          <a class="logo navbar-brand flex-1" href="#">QAD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-white d-flex align-items-left align-items-lg-center"> 
+              <li class="nav-item me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <!-- <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-md-3 mx-lg-2 me-lg-3">
+                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+              </li>
+              <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                <a class="nav-link active" aria-current="page" href="./admin_Accounts.html">Accounts</a>
+              </li> -->
+              <span></span>
+              <li class="nav-item logged-out px-0">
+                <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#" >Login</a>
+              </li>
+          
+              <!-- <li id="account" class="nav-item logged-in px-0">
+                <a class="nav-link modal-trigger" data-toggle="displayAccount" data-target="displayAccount" href="#" style="display:none;">Account</a>
+              </li> -->
+              <div class="dropdown logged-in">
+                <button class="account btn text-dark dropdown-toggle d-flex justify-content-center align-items-center " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background: #FAD02C;">
+
+                </button>
+      
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">My Account</a></li>
+                  <li id="logout"><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </div>
+              <!-- <li class="nav-item logged-in px-0">
+                <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#">Logout</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
