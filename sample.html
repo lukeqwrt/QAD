@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    chatbot
+    <ul class="facts">
+        <!-- <li> nakakatamad </li> -->
+        <li> hi! I'm botbot, welcome to quality assurance division </li>
+    </ul>
+
+    <div class="voice">
+        <form action="#">
+        <div class="row" style="display:none;">
+            <label>Enter Text</label>
+            <textarea class="textarea"></textarea>
+        </div>
+        <div class="row" style="display:none;">
+            <label>Select Voice</label>
+            <div class="outer">
+            <select class="select">Google português do Brasil</select>
+            </div>
+        </div>
+        <i onclick="soundOn(this)" class="icon fa-solid fa-volume-high">button</i>
+        </form>
+   
+    </div>
+
+    <script>
+        function soundOn(sound){
+    const content = document.querySelector('.facts')
+    const textarea = document.querySelector('.textarea')
+    const voiceList = document.querySelector('.select')
+
+    let synth = speechSynthesis,
+    isSpeaking = true;
+    voices();
+    function voices(e){
+        for(let voice of synth.getVoices()){
+            let selected = voice.name === "Microsoft David - English (United States)" ? "selected" : "";
+            console.log(voice.name)
+        }
+    }
+    synth.addEventListener("voiceschanged", voices);
+    function textToSpeech(text){
+        let utterance = new SpeechSynthesisUtterance(text);
+        for(let voice of synth.getVoices()){
+            if(voice.name === "Microsoft David - English (United States)"){
+                utterance.voice = voice;
+            }
+        }
+        synth.speak(utterance);
+    }
+    sound.addEventListener('click', (e) => {
+        
+        e.stopPropagation();
+        e.preventDefault();
+
+            if(!synth.speaking){
+                textToSpeech(content.textContent);
+            }
+            if(content.textContent.length > 80){
+                setInterval(()=>{
+                    if(!synth.speaking && !isSpeaking){
+                        isSpeaking = true;
+                    }else{
+                    }
+                }, 500);
+                if(isSpeaking){
+                    synth.resume();
+                    isSpeaking = false;
+                }else{
+                    synth.pause();
+                    isSpeaking = true;
+                }
+            }else{
+            }
+
+    })
+}
+
+    </script>
+</body>
+</html>

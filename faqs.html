@@ -12,6 +12,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+        <!-- fonts -->
+        <link href="http://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -39,13 +41,13 @@
           <img class="me-md-3 me-lg-4" id="qad_logo" src="../img/QAD Logo FINAL.png" alt="">
           <div class="brand  flex-grow-1">
             <div class="top_brand d-flex flex-column">
-              <h3 class="text-light pb-0">Quality Assurance Division</h3>
+              <h3 class="text-light pb-2">Quality Assurance Division</h3>
             </div>
             <span class="my_guhit"></span>
             <span class="brand_span mb-4">DEPARTMENT OF EDUCATION - NATIONAL CAPITAL REGION</span>
 
           </div>
-          <div class="large-3  columns">
+          <div class="large-3 columns">
             <div id="text-1" class="ear-content widget anchor widget_text">		
                   <div class="textwidget">
                     <div id="pst-container">
@@ -76,12 +78,12 @@
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
                   <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
-                    The QAD
+                    About
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./about.html">About the Region</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html#Organizational">QAD Organizational Structure, Office Functions and Job Summary</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">QAD Programs and Projects</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./about.html#Organizational">About Us</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Programs and Projects</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="./about.html">Transparency</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="./about.html">Data Privacy Notice</a></li>
                   </ul>
@@ -96,7 +98,8 @@
                     <li class="list_blue"><a class="dropdown-item" href="./services.html">Government Recognition Application</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="./services.html">Tuition and Other Fees Increase Application</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Temporary and Permanent Closure</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Certificates</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Certifications</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Special Order</a></li>
                   </ul>
                 </li>
               
@@ -105,8 +108,21 @@
                     Issuances
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./issuances.html">Regional</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        National &raquo;
+                      </a>
+                      <ul id="dropdown_spes" class="dropdown-menu dropdown-submenu ">
+                        <li>
+                            <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="./issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li> -->
+                    <li class="list_blue"><a class="dropdown-item" href="./issuancesPage/regional.html">Regional</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
@@ -125,16 +141,16 @@
                      The QAD-i
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./theQADi.html">Talk To Us</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./theQADi.html">Feedback</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">pRiMe CSAT</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Citizen Client Satisfaction Survey</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Regional Directory</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Division Directory</a></li>
                   </ul>
                 </li>
 
                 <li class="nav-item  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link active" aria-current="page" href="./faqs.html">FAQ'S</a>
+                  <a class="nav-link active" aria-current="page" href="./faqs.html">How To</a>
                 </li>
                 <li class="nav-item justify-content-lg-end flex-grow-last  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
                  <input class="px-1" type="text" placeholder="Search">
@@ -177,55 +193,86 @@
         </div>
     </nav>
       <div class="site-map">
-        <p>YOU ARE HERE. FAQ'S</p>
+        <p>YOU ARE HERE. HOW TO</p>
       </div>
           <div class="container">
-            <h3> The FAQ'S</h3>
+            <h3> HOW TO</h3>
           </div>
       
 
-        <!-- footer -->
+          <div class="footer_start container-fluid">
+            <div class="container py-5 text-center">
+             
 
-        <div id="footer" class="container-fluid mt-3 py-4 px-2 px-lg-5">
-          <div class="footer_content">
-            <div class="seal">
-              <img class="govphseal" src="./img/govph seal.png" alt="">
+              <div class="wrapper">
+                <p class="m-0">How are we doing? Help us to improve our services. Your feedback matters to us.</p>
+                <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">take our Client Satisfaction Survey</a>
+              </div>
+              <div class="wrappere">
+                <p class="m-0">Thank you for browsing the QAD-i. You are visitor no.:</p>
+                <div id="sfc76wnfcs8c8czec2ppm8hleml1h8637zn"></div>
+                <script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=76wnfcs8c8czec2ppm8hleml1h8637zn&down=async" async></script>
+                <noscript><a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=76wnfcs8c8czec2ppm8hleml1h8637zn" border="0" title="free hit counter" alt="free hit counter"></a></noscript>   
+              </div>
+              <div class="wrapper">
+                <p class="m-0">What do you think of our website? We want to hear from you.</p>
+                <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/viewform">i-Share Participation Tool</a>
+              </div>
+              <a class="contact_us_footer" href="./theQADi.html">Contact us here</a>
             </div>
-            <div class="footer_details">
-              <div class="rep">
-                <p>REPUBLIC OF THE PHILIPPINES</p>
-                <span>All content is in the public domain unless otherwise stated.</span>
-              </div>
-              <div class="about">
-                <p>ABOUT GOVPH</p>
-                <span>Learn more about the Philippine government, its structure, how government works and the people behind it.</span>
-                <div class="gov_footer mt-3 d-flex flex-column">
-                  <a href="https://www.gov.ph/">GOV.PH</a>
-                  <a href="https://www.officialgazette.gov.ph/">Official Gazette</a>
-                  <a href="https://data.gov.ph/index/home">Open Data Portal</a>
-                </div>
-      
-              </div>
-              <div class="gov_link">
-                <div class="links">
-                  <p>GOVERNMENT LINKS</p>
-                  <a href="https://op-proper.gov.ph/">Office of the President</a>
-                  <a href="https://ovp.gov.ph/">Office of the Vice President</a>
-                  <a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a>
-                  <a href="https://sc.judiciary.gov.ph/">Supreme Court</a>
-                  <a href="http://ca.judiciary.gov.ph/">Court of Appeals</a>
-                  <a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a>
-                </div>
+
+          </div>
+          <!-- footer -->
+          <div id="footer" class="container-fluid mt-0 py-4 px-2 px-lg-5">
           
+              <div class="footer_content">
+                <div class="seal">
+                  <img class="govphseal" src="./img/govph seal.png" alt="">
+                </div>
+                <div class="footer_details">
+                  <div class="rep">
+                    <p>REPUBLIC OF THE PHILIPPINES</p>
+                    <span>All content is in the public domain unless otherwise stated.</span>
+                  </div>
+                  <div class="about">
+                    <p>ABOUT GOVPH</p>
+                    <span>Learn more about the Philippine government, its structure, how government works and the people behind it.</span>
+                    <div class="gov_footer mt-3 d-flex flex-column">
+                      <a href="https://www.gov.ph/">GOV.PH</a>
+                      <a href="https://www.officialgazette.gov.ph/">Official Gazette</a>
+                      <a href="https://data.gov.ph/index/home">Open Data Portal</a>
+                    </div>
+          
+                  </div>
+                  <div class="gov_link">
+                    <div class="links">
+                      <p>GOVERNMENT LINKS</p>
+                      <a href="https://op-proper.gov.ph/">Office of the President</a>
+                      <a href="https://ovp.gov.ph/">Office of the Vice President</a>
+                      <a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a>
+                      <a href="https://sc.judiciary.gov.ph/">Supreme Court</a>
+                      <a href="http://ca.judiciary.gov.ph/">Court of Appeals</a>
+                      <a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a>
+                    </div>
+             
+                  </div>
+                  <div class="logos">
+                    <div class=""><a target="_blank" href="https://www.foi.gov.ph/"><img class="small_logo" src="./img/freedom of information.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="./transparency.html"><img src="./img/transparency-seal-160x160.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://pqf.gov.ph/Home/Details/11"><img src="./img/pqf logo.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://depedictncr.wordpress.com/?fbclid=IwAR2hHeCHUKXy9ncAhUvebz817Sl58DZcxvkuF3_1oFLk6_6O6Rw3GFjyIlE"><img src="./img/DepEd NCR logo.png" alt=""></a></div>
+                  </div>
+                </div>
+                  <span class="last">
+                    <p>
+                      Managed by DepEd NCR Quality Assurance Division (QAD)
+                    
+                    </p>
+                  </span>
               </div>
-            </div>
-              <span class="last">
-                Managed by DepEd NCR Quality Assurance Division (QAD)
-              </span>
-          </div>
+     
   
-        
-      </div>
+        </div>
     </div>
  
     </div>
@@ -266,7 +313,7 @@
         </div>
       </div>
     </div>
-
+    <script src="//code.tidio.co/7zyb9ip1dglkxtbieyxpb5woidftkeme.js" async></script>
     <script>
       var config = {
       apiKey: "AIzaSyAsc9VH1T4NCmdoE6YoV4ES5nQlvdiLXOI",

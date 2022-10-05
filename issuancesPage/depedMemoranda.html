@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QAD</title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- <link rel="stylesheet" href="./css/about.css"> -->
+    <link rel="stylesheet" href="../style.css">
     <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -29,10 +28,26 @@
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
- 
+  
      <style>
-       .main .ncr{
-           text-align: justify;
+       .main .orders .box_parent .box_content{
+         background: rgb(230, 230, 230);
+         transition: 0.3s ease;
+       }
+       .main .orders .box_parent .box_content:hover{
+         /* background: rgb(218, 218, 218); */
+         background: #f9f9f9;
+       }
+       .main .orders .box .box_content{
+          border: 1px solid #f2f2f2;
+       }
+       .main .orders .box{
+        background: #999;
+        text-align: justify;
+         text-decoration: none;
+       }
+       .main .orders .box h6{
+         color: #000;
        }
      </style>
 </head>
@@ -65,9 +80,7 @@
       </div>
     </div>
   </div>
-
     <div class="main">
-     
       <nav class="mynav navbar navbar-expand-lg navbar-light p-0">
         <div class="d-flex flex-column w-100 ">
           <div class="nav2 px-4 px-lg-5 py-0">
@@ -80,18 +93,18 @@
               </div>
               <ul class="navbar-nav container text-white w-100"> 
                 <li class="nav-item ms-auto me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
                   <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
                     About
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./about.html">About the Region</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html#Organizational">About Us</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Programs and Projects</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Transparency</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Data Privacy Notice</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../about.html">About the Region</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html#Organizational">About Us</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html">Programs and Projects</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html">Transparency</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html">Data Privacy Notice</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
@@ -99,13 +112,13 @@
                     pRiMe Services
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./services.html">New Government Permit Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Renewal of Government Permit Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Government Recognition Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Tuition and Other Fees Increase Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Temporary and Permanent Closure</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Certifications</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Special Order</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">New Government Permit Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Renewal of Government Permit Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Government Recognition Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Tuition and Other Fees Increase Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Temporary and Permanent Closure</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Certifications</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Special Order</a></li>
                   </ul>
                 </li>
               
@@ -120,15 +133,15 @@
                       </a>
                       <ul id="dropdown_spes" class="dropdown-menu dropdown-submenu ">
                         <li>
-                            <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
+                            <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="./issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
+                          <a class="dropdown-item" href="../issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
                         </li>
                       </ul>
                     </li>
                     <!-- <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li> -->
-                    <li class="list_blue"><a class="dropdown-item" href="./issuancesPage/regional.html">Regional</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../issuancesPage/regional.html">Regional</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
@@ -136,9 +149,9 @@
                     Resources
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./resources.html">DepEd TV</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Facts and Figures</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Downloadable Files and Forms</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../resources.html">DepEd TV</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../resources.html">Facts and Figures</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../resources.html">Downloadable Files and Forms</a></li>
                   </ul>
                 </li>
 
@@ -147,16 +160,16 @@
                      The QAD-i
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./theQADi.html">Feedback</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../theQADi.html">Feedback</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Citizen Client Satisfaction Survey</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Regional Directory</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Division Directory</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../theQADi.html">Regional Directory</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../theQADi.html">Division Directory</a></li>
                   </ul>
                 </li>
 
                 <li class="nav-item  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link active" aria-current="page" href="./faqs.html">How To</a>
+                  <a class="nav-link active" aria-current="page" href="../faqs.html">How To</a>
                 </li>
                 <li class="nav-item justify-content-lg-end flex-grow-last  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
                  <input class="px-1" type="text" placeholder="Search">
@@ -198,131 +211,119 @@
           </div>
         </div>
     </nav>
-    <div class="site-map">
-      <p>YOU ARE HERE. THE QAD</p>
-    </div>
-    <div class="container ncr py-4" style="border-bottom: 1px solid rgb(145, 145, 145);">
-      <h3>The National Capital Region</h3>
-      <p>The National Capital Region (NCR), also known as Metropolitan Manila, is the capital region of the Philippines. It is located in the southwestern portion of Luzon, directly below Central Luzon. Lying along the flat alluvial and deltaic plains draining the Pasig River and Laguna de Bay, its territory extends eastward and up the rolling hills of Marikina Valley and stops short at the lowlying edges of Rizal province. It is bounded by the fertile plains of Central Luzon in the North, the sweeping Sierra Madre Mountains in the East, and Laguna de Bay in the South. Manila Bay, on the other hand, spreads out perfectly on the West, providing a great canvass for the famed sunsets of Manila.</p>
-      <p class="" >The DepEd National Capital Region is composed of 16 schools divisions and its school population is being served by 516 public elementary and 456 public junior and senior high schools, complemented by 1,982 private pre-schools, 2,122 private elementary schools, 965 private junior high schools and 721 private senior high schools serving more than  2.8 million children in the region.</p>
-
-    </div>
-    <div class="container ncr py-4" style="border-bottom: 1px solid rgb(145, 145, 145);">
-      <h3 class="">DepEd NCR Team Vision</h3>
-      <p>By 2022, DepEd NCR envisions itself as the prime learning organization with highly competent public servants imbued with organizational citizenship behavior who are pro-active and responsive to its education stakeholders.
-      </p>
-      <p>DepEd NCR thrives in an organizational learning culture that leverages on its human capital through a collaborative workplace with innovative systems and processes.</p>
-      <p class="" >DepEd NCR thrust is to equip the 21st-century learner with skills, values, and attitudes that empower them to be key players in today’s competitive global environment.</p>
-    </div>
-
-          <div class="contianer-fluid " >
-            <div class="container py-4"style="border-bottom: 1px solid rgb(145, 145, 145);">
-                <div id="dqp" class="dqp">
-                    <h3 class="mb-4">DepEd NCR Quality Policy Statement</h3>
-   
-                        <p class="mb-3">The Department of Education is committed to provide learners with quality basic education that is accessible, inclusive, and liberating thru:</p>
-                        <div class="bullet_wrapper d-flex flex-column mb-4">
-                          <span>•	Proactive leadership</span>
-                          <span>•	Shared governance</span>
-                          <span>•	Evidence-based policies, standards, and programs</span>
-                          <span>•	Responsive and relevant curricula</span>
-                          <span>•	Highly competent and committed officials, and teaching and non-teaching personnel</span>
-                          <span>•	An enabling learning environment</span>
-                        </div>
-                        <p>The Department upholds the highest standards of conduct and performance to fulfill stakeholders' needs and expectations by adhering to constitutional mandates, statutory, and regulatory requirements, and sustains client satisfaction through continuous improvement of the Quality Management System.
-    
-                        </p>
-                  </div>
-            </div>
-          </div>
-          <div class="container-fluid ncr" >
-            <div class="container py-4" style="border-bottom: 1px solid rgb(145, 145, 145);">
-              <h3>The pRiMe NCR</h3>
-              <p>The harmonious effort of the 16 Schools Division in NCR in the realization of its vision.  True to its mandate, DepEd-NCR responds to the diverse needs of its learners through its strategies encapsulated in P-rioritize R-ethink I-nnovate M-easure and E-valuate (PRIME).  As a premiere Region in the country, DepEd-NCR is characterized by elegance, simplicity, abundance and resilience as symbolizes by a diamond.  It supports the fulfillment of United Nation’s Sustainable Development Goal No. 4, i.e., the provision of “Quality Education”, to all learners in the Region.</p>
-            </div>
-          </div>
-          <div class="container-fluid ncr">
-            <div class="container py-4">
-              <h3>The 3E'S</h3>
-              <p>3e's</p>
-            </div>
-          </div>
-  
-         <!-- footer -->
-         <div class="footer_start container-fluid">
-          <div class="container py-5 text-center">
-           
-
-            <div class="wrapper">
-              <p class="m-0">How are we doing? Help us to improve our services. Your feedback matters to us.</p>
-              <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">take our Client Satisfaction Survey</a>
-            </div>
-            <div class="wrappere">
-              <p class="m-0">Thank you for browsing the QAD-i. You are visitor no.:</p>
-              <div id="sfc76wnfcs8c8czec2ppm8hleml1h8637zn"></div>
-              <script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=76wnfcs8c8czec2ppm8hleml1h8637zn&down=async" async></script>
-              <noscript><a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=76wnfcs8c8czec2ppm8hleml1h8637zn" border="0" title="free hit counter" alt="free hit counter"></a></noscript>   
-            </div>
-            <div class="wrapper">
-              <p class="m-0">What do you think of our website? We want to hear from you.</p>
-              <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/viewform">i-Share Participation Tool</a>
-            </div>
-            <a class="contact_us_footer" href="./theQADi.html">Contact us here</a>
-          </div>
-
-        </div>
-        <!-- footer -->
-        <div id="footer" class="container-fluid mt-0 py-4 px-2 px-lg-5">
-        
-            <div class="footer_content">
-              <div class="seal">
-                <img class="govphseal" src="./img/govph seal.png" alt="">
-              </div>
-              <div class="footer_details">
-                <div class="rep">
-                  <p>REPUBLIC OF THE PHILIPPINES</p>
-                  <span>All content is in the public domain unless otherwise stated.</span>
-                </div>
-                <div class="about">
-                  <p>ABOUT GOVPH</p>
-                  <span>Learn more about the Philippine government, its structure, how government works and the people behind it.</span>
-                  <div class="gov_footer mt-3 d-flex flex-column">
-                    <a href="https://www.gov.ph/">GOV.PH</a>
-                    <a href="https://www.officialgazette.gov.ph/">Official Gazette</a>
-                    <a href="https://data.gov.ph/index/home">Open Data Portal</a>
-                  </div>
-        
-                </div>
-                <div class="gov_link">
-                  <div class="links">
-                    <p>GOVERNMENT LINKS</p>
-                    <a href="https://op-proper.gov.ph/">Office of the President</a>
-                    <a href="https://ovp.gov.ph/">Office of the Vice President</a>
-                    <a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a>
-                    <a href="https://sc.judiciary.gov.ph/">Supreme Court</a>
-                    <a href="http://ca.judiciary.gov.ph/">Court of Appeals</a>
-                    <a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a>
-                  </div>
-           
-                </div>
-                <div class="logos">
-                  <div class=""><a target="_blank" href="https://www.foi.gov.ph/"><img class="small_logo" src="./img/freedom of information.png" alt=""></a></div>
-                  <div class=""><a target="_blank" href="./transparency.html"><img src="./img/transparency-seal-160x160.png" alt=""></a></div>
-                  <div class=""><a target="_blank" href="https://pqf.gov.ph/Home/Details/11"><img src="./img/pqf logo.png" alt=""></a></div>
-                  <div class=""><a target="_blank" href="https://depedictncr.wordpress.com/?fbclid=IwAR2hHeCHUKXy9ncAhUvebz817Sl58DZcxvkuF3_1oFLk6_6O6Rw3GFjyIlE"><img src="./img/DepEd NCR logo.png" alt=""></a></div>
-                </div>
-              </div>
-                <span class="last">
-                  <p>
-                    Managed by DepEd NCR Quality Assurance Division (QAD)
-                  
-                  </p>
-                </span>
-            </div>
-   
-
+      <div class="site-map">
+        <p>YOU ARE HERE. DEPED ORDERS RELATED TO QAD</p>
       </div>
-      
+          <div class="container mb-4">
+            <h3>DepEd Memoranda related to QAD</h3>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1yoFrVhuz2CU8giVywcl-XaYfe1yoL-Sj/view?fbclid=IwAR2bHCyx-muY5cjHAS0rk7Q5aSUnzCo7ZcXNI83PnyYDcInfRbIu3V2sSCg" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DM_s2022_007 - Adjustment to the Period of Consultation and Application for Changes in Tuition and Other School Fees by Private Educational Institutions in Light of the Adjusted School Calendar for School Year 2022-2023</h6> 
+              </div>
+            </div>
+            </div>
+            
+            <div class="container-fluid orders mb-2">
+                <div class="container box_parent">
+                  <a class="box" href="https://drive.google.com/file/d/1kH531K9cJNeBji7fULrpgi8yz82Tq7Vy/view?fbclid=IwAR1Up92JoTnC4mZsjhbkdobt5idmWRNFxkT6i6kZpSr0WI5zN-Kj_-g3S44" target="_blank">
+                    <div class="box_content py-2 px-3">
+                    <h6 class="m-0">DM-OUCI-2021-127 - Issuance of Learner Reference Number to Learners from Schools Without a Permit to Operate and Those Affected by DepEd Order No. 20, s,2018</h6> 
+                  </div>
+              </a>
+            </div>
+          </div>
+            <div class="container-fluid orders mb-2">
+                <div class="container box_parent">
+                  <a class="box" href="https://drive.google.com/file/d/1CHIsTUZSQFRO18cTG4w2kc1N-72QA8tr/view?fbclid=IwAR2d19BqTKA5aKC3myR1wZPZDmxOPZ_gD2G9uPEtp4BQN71Gt3-nWGJdbDg" target="_blank">
+                    <div class="box_content py-2 px-3">
+                    <h6 class="m-0">DM_s2016_076 - Senior High School Manual of Operations Volume One</h6> 
+                  </div>
+              </a>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="footer_start container-fluid">
+            <div class="container py-5 text-center">
+             
+
+              <div class="wrapper">
+                <p class="m-0">How are we doing? Help us to improve our services. Your feedback matters to us.</p>
+                <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">take our Client Satisfaction Survey</a>
+              </div>
+              <div class="wrappere">
+                <p class="m-0">Thank you for browsing the QAD-i. You are visitor no.:</p>
+                <div id="sfc76wnfcs8c8czec2ppm8hleml1h8637zn"></div>
+                <script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=76wnfcs8c8czec2ppm8hleml1h8637zn&down=async" async></script>
+                <noscript><a href="https://www.freecounterstat.com" title="free hit counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=76wnfcs8c8czec2ppm8hleml1h8637zn" border="0" title="free hit counter" alt="free hit counter"></a></noscript>   
+              </div>
+              <div class="wrapper">
+                <p class="m-0">What do you think of our website? We want to hear from you.</p>
+                <a class="m-0" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/viewform">i-Share Participation Tool</a>
+              </div>
+              <a class="contact_us_footer" href="./theQADi.html">Contact us here</a>
+            </div>
+
+          </div>
+          <!-- footer -->
+          <div id="footer" class="container-fluid mt-0 py-4 px-2 px-lg-5">
+          
+              <div class="footer_content">
+                <div class="seal">
+                  <img class="govphseal" src="../img/govph seal.png" alt="">
+                </div>
+                <div class="footer_details">
+                  <div class="rep">
+                    <p>REPUBLIC OF THE PHILIPPINES</p>
+                    <span>All content is in the public domain unless otherwise stated.</span>
+                  </div>
+                  <div class="about">
+                    <p>ABOUT GOVPH</p>
+                    <span>Learn more about the Philippine government, its structure, how government works and the people behind it.</span>
+                    <div class="gov_footer mt-3 d-flex flex-column">
+                      <a href="https://www.gov.ph/">GOV.PH</a>
+                      <a href="https://www.officialgazette.gov.ph/">Official Gazette</a>
+                      <a href="https://data.gov.ph/index/home">Open Data Portal</a>
+                    </div>
+          
+                  </div>
+                  <div class="gov_link">
+                    <div class="links">
+                      <p>GOVERNMENT LINKS</p>
+                      <a href="https://op-proper.gov.ph/">Office of the President</a>
+                      <a href="https://ovp.gov.ph/">Office of the Vice President</a>
+                      <a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a>
+                      <a href="https://sc.judiciary.gov.ph/">Supreme Court</a>
+                      <a href="http://ca.judiciary.gov.ph/">Court of Appeals</a>
+                      <a href="https://sb.judiciary.gov.ph/">Sandiganbayan</a>
+                    </div>
+             
+                  </div>
+                  <div class="logos">
+                    <div class=""><a target="_blank" href="https://www.foi.gov.ph/"><img class="small_logo" src="../img/freedom of information.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="../transparency.html"><img src="../img/transparency-seal-160x160.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://pqf.gov.ph/Home/Details/11"><img src="../img/pqf logo.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://depedictncr.wordpress.com/?fbclid=IwAR2hHeCHUKXy9ncAhUvebz817Sl58DZcxvkuF3_1oFLk6_6O6Rw3GFjyIlE"><img src="../img/DepEd NCR logo.png" alt=""></a></div>
+                  </div>
+                </div>
+                  <span class="last">
+                    <p>
+                      Managed by DepEd NCR Quality Assurance Division (QAD)
+                    
+                    </p>
+                  </span>
+              </div>
+     
+  
+        </div>
     </div>
  
     </div>
@@ -363,7 +364,6 @@
         </div>
       </div>
     </div>
-
     <script src="//code.tidio.co/7zyb9ip1dglkxtbieyxpb5woidftkeme.js" async></script>
     <script>
       var config = {

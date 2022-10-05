@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QAD</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-        <!-- fonts -->
+    <link href="http://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,35 +29,28 @@
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
-
+  
      <style>
-       .main .content p{
-          font-size: 18px;
-          margin: 0;
-          margin-bottom: 1px;
+       .main .orders .box_parent .box_content{
+         background: rgb(230, 230, 230);
+         transition: 0.3s ease;
        }
-       .main .content p:nth-child(2){
-         margin-bottom: 20px;
+       .main .orders .box_parent .box_content:hover{
+         /* background: rgb(218, 218, 218); */
+         background: #f9f9f9;
        }
-       .main .content p:nth-child(3){
-         font-weight: bold;
+       .main .orders .box .box_content{
+          border: 1px solid #f2f2f2;
        }
-       .main .image_wrapper{
-         padding: 20px;
-         background: rgb(219, 219, 219);
-         max-width: 1200px;
-         margin: 0 auto;
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         grid-template-rows: auto auto;
-         grid-gap: 20px;
+       .main .orders .box{
+        background: #999;
+        text-align: justify;
+         text-decoration: none;
        }
-       .main .image_wrapper .ccb_image img{
-        height: auto;
-        width: 100%;
+       .main .orders .box h6{
+         color: #000;
        }
      </style>
-
 </head>
 <body >
   <!-- banner -->
@@ -89,7 +82,6 @@
     </div>
   </div>
     <div class="main">
-     
       <nav class="mynav navbar navbar-expand-lg navbar-light p-0">
         <div class="d-flex flex-column w-100 ">
           <div class="nav2 px-4 px-lg-5 py-0">
@@ -102,18 +94,18 @@
               </div>
               <ul class="navbar-nav container text-white w-100"> 
                 <li class="nav-item ms-auto me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
                   <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
                     About
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./about.html">About the Region</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html#Organizational">About Us</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Programs and Projects</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Transparency</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Data Privacy Notice</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../about.html">About the Region</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html#Organizational">About Us</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html">Programs and Projects</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html">Transparency</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../about.html">Data Privacy Notice</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
@@ -121,13 +113,13 @@
                     pRiMe Services
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./services.html">New Government Permit Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Renewal of Government Permit Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Government Recognition Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Tuition and Other Fees Increase Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Temporary and Permanent Closure</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Certifications</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Special Order</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../services.html">New Government Permit Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Renewal of Government Permit Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Government Recognition Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Tuition and Other Fees Increase Application</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Temporary and Permanent Closure</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Certifications</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../services.html">Request for Special Order</a></li>
                   </ul>
                 </li>
               
@@ -142,15 +134,15 @@
                       </a>
                       <ul id="dropdown_spes" class="dropdown-menu dropdown-submenu ">
                         <li>
-                            <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
+                            <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="./issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
+                          <a class="dropdown-item" href="../issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
                         </li>
                       </ul>
                     </li>
                     <!-- <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li> -->
-                    <li class="list_blue"><a class="dropdown-item" href="./issuancesPage/regional.html">Regional</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../issuancesPage/regional.html">Regional</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
@@ -158,9 +150,9 @@
                     Resources
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./resources.html">DepEd TV</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Facts and Figures</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Downloadable Files and Forms</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../resources.html">DepEd TV</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../resources.html">Facts and Figures</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../resources.html">Downloadable Files and Forms</a></li>
                   </ul>
                 </li>
 
@@ -169,16 +161,16 @@
                      The QAD-i
                   </a>
                   <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./theQADi.html">Feedback</a></li>
+                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="../theQADi.html">Feedback</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share</a></li>
                     <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Citizen Client Satisfaction Survey</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Regional Directory</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Division Directory</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../theQADi.html">Regional Directory</a></li>
+                    <li class="list_blue"><a class="dropdown-item" href="../theQADi.html">Division Directory</a></li>
                   </ul>
                 </li>
 
                 <li class="nav-item  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link active" aria-current="page" href="./faqs.html">How To</a>
+                  <a class="nav-link active" aria-current="page" href="../faqs.html">How To</a>
                 </li>
                 <li class="nav-item justify-content-lg-end flex-grow-last  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
                  <input class="px-1" type="text" placeholder="Search">
@@ -220,78 +212,197 @@
           </div>
         </div>
     </nav>
-          <div class="site-map">
-            <p>YOU ARE HERE. Talk To Us</p>
+      <div class="site-map">
+        <p>YOU ARE HERE. DEPED ORDERS RELATED TO QAD</p>
+      </div>
+          <div class="container mb-4">
+            <h3>DepEd Orders related to QAD</h3>
           </div>
-          <div class="container content pt-4 mb-3">
-            <h3> Talk To Us</h3>
-            <p>For comments, suggestions, queries, and further information:</p>
-            <p>Quality Assurance Division</p>
-            <p>DepEd NCR, Misamis St. Bago Bantay, Quezon City</p>
-            <p>(+63-2) 9821 5630</p>
-          </div>
-          <div class="container pb-5">
-            <div class="row">
-              <div class="col-md-6">
-                <form class="qadform">
-                  <div class="col-md-5">
-                    <div class="mb-3">
-                      <label for="Name" class="form-label fw-bold">Name</label>
-                      <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" >
-                    </div>
-                    <div class="mb-3">
-                      <label for="Email" class="form-label fw-bold">Email *</label>
-                      <input type="Email" class="form-control" id="Email" required>
-                    </div>
-                    <div class="mb-3">
-                      <label for="Subject" class="form-label fw-bold">Subject</label>
-                      <input type="text" class="form-control" id="Subject" >
-                    </div>
-                    <label for="" class="form-label fw-bold">Type Of Concern (Please Choose One)</label>
-                    <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Query</label>
-                    </div>
-                    <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Complaint / Feedback</label>
-                    </div>
-                    <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Suggestion</label>
-                    </div>
-                    <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Request</label>
-                    </div>
-                    <div class="mb-2 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Other Concern</label>
-                    </div>
-                    <div class="mb-3">
-                      <label for="Concern" class="form-label fw-bold">Other Concern</label>
-                      <input type="text" class="form-control" id="Concern" required>
-                    </div>
-                    <label for="" class="form-label fw-bold">Message</label>
-                    <div class="form-floating mb-3">
-                      <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
-                      <!-- <label for="floatingTextarea2">Comments</label> -->
-                    </div>
-    
-                    <button type="submit" class="btn" style="background: rgb(190, 190, 190);">Submit</button>
-                  </div>
-     
-                </form>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1C3xVnoQXnMTEwWDLTQwOv8VP4Jn9PUvr/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2022_041 - Amendment to DepEd Order No. 88, s. 2010 (2010 Revised Manual of Regulations for Private Schools)</h6> 
               </div>
-              <div class="col-md-6 d-flex flex-column justify-content-lg-end">
-                <div class="map_wrapper  border border-1 mb-5">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9629113044025!2d121.02656901484093!3d14.6580462897659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6e39d622f61%3A0x91c5f879df0a26f4!2sDepartment%20of%20Education%20-%20NCR%20Regional%20Office!5e0!3m2!1sen!2sph!4v1664782091443!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
-
-                </div>
-              </div>
-
+              </a>
             </div>
           </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/10UMHK0TvxTx8z4uQfcZQSn-HiaIUoK4B/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2022_040 - Amendment to DepEd Order No. 047, s. 2016 (Omnibus Policy on Kindergarten Education)</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1jyhF6EmCQPit6cEVrkp3Mh8NZn7893jU/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3" >
+                <h6 class="m-0">DO_s2022_034 - School Calendar and Activities for School Year 2022-2023</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1hsG51_6WNZsVkBhGCdUX-nY0uarBhExj/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2022_025  - Amendment to DepEd Order No. 13, s 2018 (Implementing Guidelines on the Conduct of Remedial and Advancement Classes During Summer for the K to 12 Basic Education Program)</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/10noFreWq9mFTB3oPbSbljLg8b503dDrc/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2022_002 - Interim Guidelines on Private School Voluntary Closures and Participation in Government Assistance and Subsidies Programs in Light of the COVID-19 Pandemic Effective SY 2021-2022</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1uQYrg_K61b_hs5-IVFqd_cAbWJNxVdKV/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3" >
+                <h6 class="m-0">DO_s2021_044 - Policy Guidelines on the Provision of Educational Programs and Services for Learners with Disabilities in the K to 12 Basic Education Program</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1foXmrbnnlCe-aKrEgVoZkgs67NaSWdfP/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">ODO_s2020_031 - Interim Guidelines for Assessment and Grading in Light of the Basic Education Learning Continuity Plan</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1nOBhublkUpk3AuhjBuPMsogPAMEbVmnH/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2019_021 - Policy Guidelines on the K to 12 Basic Education Program</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/17C46x_ZPchj9TwQEr_LwDgk92IxsXGyr/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2018_010 - Guidelines on the Issuance of Special Orders for the Approval of the Eligibility for Graduation from Senior High School of Grade 12 Learners Enrolled in Private Schools/Colleges and Technical-Vocational Institutions for School Year 2017-2018</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1jJlzzJpK8rJOj3HO13MFGc4eSYClTADT/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2018_003 - Basic Enrollment Policy</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/18IyDt1haHUFv0USZrrP9w37CUy2wiG50/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2017_064 - Establishing the Minimum Performance Standards and Specifications for DepEd School Buildings</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/15MPyP4U9hfHU__XSb1-2kwyRQfI5Bla2/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2017_020 - Guidelines on the Implementation of the Educational Service Contracting and Teachers’ Salary Subsidy Programs in Junior High School Effective School Year 2017-2018</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/12Y0SqtRThyKwGA-zdAtIGMHqFVFYUX9T/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2017_019 - Guidelines on the Implementation of the Senior High School Voucher Program Effective School Year 2017-2018</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1onCNqY5w7JKleK1LwYgb5R98JjXT51oO/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2016_47 - Omnibus Policy on Kindergarten Education</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1H1oddMeFH_Ot7gvCv6FYcbv1zTsCZj2Z/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2015_51 - Guidelines on the Implementation of the SHS Program in Existing Public JHSs and ISs, Establishment of Stand-Alone Public SHSs, and Conversion of Existing Public Elementary and JHSs Into Stand-Alone SHSs</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/15J-CN6wE8qvfH3lVVfGQG4P8s0KgFG-8/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2011_56 - Standards for Philippine Libraries</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1nHzvVa9KgycHlOghJciYk_wqmVS3vRAl/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-2">DO_s2006_46 - Guidelines on the Pilot Implementation of the Open High School Program (OHSP)</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1E3cVtXFVnVR6TyJkThENER91HpsXsQdV/view?usp=sharing" target="_blank">
+                <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2006_32 - Revised Policies on Voluntary Accreditation for Elementary and Secondary Private Schools in Aid of Quality and Excellence for Basic Education</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://drive.google.com/file/d/1vxOElmKBxZ_hw9QX6ReuLvuaG3NTksAu/view?usp=sharing" target="_blank">
+              <div class="box_content py-2 px-3">
+                <h6 class="m-0">DO_s2009_72 - Inclusive Education as Strategy for Increasing Participation Rate of Children</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+          <div class="container-fluid orders mb-2">
+            <div class="container box_parent">
+              <a class="box" href="https://www.officialgazette.gov.ph/1974/05/11/presidential-decree-no-451-s-1974/" target="_blank">
+              <div class="box_content py-2 px-3">
+                <h6 class="m-0">Presidential Decree No. 451, s. 1974 - Authorizing the Secretary of Education and Culture to Regulate the Imposition of Tuition and other School Fees, Repealing Republic Act No. 6139, and for other Purposes</h6> 
+              </div>
+            </a>
+            </div>
+          </div>
+
+
+
+
+
 
 
 
@@ -323,7 +434,7 @@
           
               <div class="footer_content">
                 <div class="seal">
-                  <img class="govphseal" src="./img/govph seal.png" alt="">
+                  <img class="govphseal" src="../img/govph seal.png" alt="">
                 </div>
                 <div class="footer_details">
                   <div class="rep">
@@ -353,10 +464,10 @@
              
                   </div>
                   <div class="logos">
-                    <div class=""><a target="_blank" href="https://www.foi.gov.ph/"><img class="small_logo" src="./img/freedom of information.png" alt=""></a></div>
-                    <div class=""><a target="_blank" href="./transparency.html"><img src="./img/transparency-seal-160x160.png" alt=""></a></div>
-                    <div class=""><a target="_blank" href="https://pqf.gov.ph/Home/Details/11"><img src="./img/pqf logo.png" alt=""></a></div>
-                    <div class=""><a target="_blank" href="https://depedictncr.wordpress.com/?fbclid=IwAR2hHeCHUKXy9ncAhUvebz817Sl58DZcxvkuF3_1oFLk6_6O6Rw3GFjyIlE"><img src="./img/DepEd NCR logo.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://www.foi.gov.ph/"><img class="small_logo" src="../img/freedom of information.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="../transparency.html"><img src="../img/transparency-seal-160x160.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://pqf.gov.ph/Home/Details/11"><img src="../img/pqf logo.png" alt=""></a></div>
+                    <div class=""><a target="_blank" href="https://depedictncr.wordpress.com/?fbclid=IwAR2hHeCHUKXy9ncAhUvebz817Sl58DZcxvkuF3_1oFLk6_6O6Rw3GFjyIlE"><img src="../img/DepEd NCR logo.png" alt=""></a></div>
                   </div>
                 </div>
                   <span class="last">
@@ -369,8 +480,6 @@
      
   
         </div>
-
-
     </div>
  
     </div>
