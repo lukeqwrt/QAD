@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
         <!-- fonts -->
-    <link href="http://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -56,6 +56,137 @@
         height: auto;
         width: 100%;
        }
+       .main .chatbot_container{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+          margin-bottom: 50px;
+          padding-bottom: 10px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+       }
+       .main .chatbot_container .chatbot_header{
+        justify-self: flex-start;
+          display: flex;
+          align-items: center;
+          background: #000066;
+          background-size: 100% calc(100% + 12px);
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          padding: 20px;
+       }
+       .main .chatbot_container .chatbot_header img{
+        height: auto;
+        width: 60px;
+       }
+       .main .chatbot_container .chatbot_header p{
+         font-family: Arial, Helvetica, old;
+         font-weight: bold;
+         margin: 0;
+         margin-left: 15px;
+         color: #fff;
+         font-size: 20px;
+       }
+       .main .chatbot_container .chatbot_body{
+        padding: 0 28px;
+        width: 100%;
+        height: 357px;
+        overflow: hidden auto;
+        background: rgb(255, 255, 255);
+        transition: all 0.9s ease 0s;
+        max-height: 357px;
+        min-height: 160px;
+
+       }
+       @keyframes fadeMessage {
+          from {
+            transform-origin: left;
+             transform: translateX(-30px) rotate(90deg) ;
+            visibility: hidden;
+            opacity: 0;
+          }
+
+          to {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0px) rotate(0deg) ;
+          }
+       }
+       .main .chatbot_container .chatbot_body .choices{
+        margin-top: 10px;
+       }
+       .main .chatbot_container .chatbot_body .choices span{
+        margin-top: 5px;
+        color: rgb(24, 24, 24);
+        border: 1px solid #000066;
+        background: rgb(241, 241, 241);
+        cursor: pointer;
+        margin-right:3px;
+        transition: 0.3s ease-in-out;
+       }
+       .main .chatbot_container .chatbot_body .choices span:hover{
+        background: #000066;
+        color: #fff;
+       }
+       .main .chatbot_container .chatbot_body .message{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        transition: 0.5s ease-in-out;
+        position: relative;
+      }
+
+       .main .chatbot_container .chatbot_body span{
+        position: absolute;
+        padding: 10px 16px;
+        border-radius: 20px;
+        margin: 2px 0px;
+        font-size: 15px;
+        line-height: 20px;
+        overflow-wrap: break-word;
+        display: inline-block;
+        max-width: 85%;
+        clear: both;
+        position: relative;
+        transition: margin 0.28s ease-in-out 0s;
+        background: #000066;
+        color: #fff;
+        animation: fadeMessage 0.3s ease-in-out;
+       }
+       .main .chatbot_container .submit_wrapper{
+        margin-top: 10px;
+        padding: 0px 0px 6px;
+        margin: 0 28px;
+        border-top: 1px solid rgb(224, 224, 224);
+       }
+       .main .chatbot_container .submit_wrapper form{
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+       .main .chatbot_container .submit_wrapper .text{
+        border: 0px;
+        width: 100%;
+        font-size: 17px;
+        padding: 20px 0px;
+        resize: none;
+        line-height: 24px;
+        overflow-x: hidden;
+
+        outline: none;
+       }
+       .main .chatbot_container .submit_wrapper .button{
+        background: #000066;
+        /* pointer-events: none; */
+        /* background: #777777; */
+        border: none;
+        outline: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 7px 23px;
+        border-radius: 50px;
+       }
+
+
      </style>
 
 </head>
@@ -223,16 +354,26 @@
           <div class="site-map">
             <p>YOU ARE HERE. Talk To Us</p>
           </div>
-          <div class="container content pt-4 mb-3">
-            <h3> Talk To Us</h3>
-            <p>For comments, suggestions, queries, and further information:</p>
-            <p>Quality Assurance Division</p>
-            <p>DepEd NCR, Misamis St. Bago Bantay, Quezon City</p>
-            <p>(+63-2) 9821 5630</p>
-          </div>
-          <div class="container pb-5">
+          <!-- <div class="container-fluid content pt-4 mb-3">
+            <div class="container">
+              <div class="row">
+          
+              </div>
+
+            </div>
+
+          </div> -->
+          <div class="container pt-4 pb-5">
             <div class="row">
               <div class="col-md-6">
+                <div class="details">
+                  <h3> Talk To Us</h3>
+                  <p>For comments, suggestions, queries, and further information:</p>
+                  <p>Quality Assurance Division</p>
+                  <p>DepEd NCR, Misamis St. Bago Bantay, Quezon City</p>
+                  <p>(+63-2) 9821 5630</p>
+                </div>
+          
                 <form class="qadform">
                   <div class="col-md-5">
                     <div class="mb-3">
@@ -283,8 +424,29 @@
      
                 </form>
               </div>
-              <div class="col-md-6 d-flex flex-column justify-content-lg-end">
-                <div class="map_wrapper  border border-1 mb-5">
+              <div class="col-md-6 d-flex flex-column">
+                <div class="chatbot_container">
+                  <div class="chatbot_header">
+                    <img src="./img/robot.png" alt="">
+                    <p>Hi there! Welcome to QAD</p>
+                  </div>
+                  <div class="chatbot_body">
+                    <div class="choices">
+                      <span class="choices_span">New Government Permit</span>
+                      <span class="choices_span">Renewal of Government Permit Application</span>
+                      <span class="choices_span">Government Recognition Application</span>
+                      <span class="choices_span">Tuition and Other Fees Increase Application</span>
+                      <span class="choices_span">Request for Temporary and Permanent Closure</span>
+                    </div>
+                  </div>
+                  <div class="submit_wrapper">
+                    <form id="messageForm">
+                      <input class="text" id="userMessage"type="text" placeholder="Enter Your Message..." required>
+                      <input class="button" type="submit" value="Send">
+                    </form>
+                  </div>
+                </div>
+                <div class="map_wrapper  border border-1 mt-auto mb-5">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9629113044025!2d121.02656901484093!3d14.6580462897659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b6e39d622f61%3A0x91c5f879df0a26f4!2sDepartment%20of%20Education%20-%20NCR%20Regional%20Office!5e0!3m2!1sen!2sph!4v1664782091443!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
 
                 </div>
@@ -428,6 +590,74 @@
     const auth = firebase.auth();
 
     db.settings({ timestampsInSnapshots: true });
+
+
+    // const choices_span = document.querySelector('choices_span')
+
+
+    const formSubmit = document.querySelector("#messageForm")
+    const messageWrapper = document.querySelector('.chatbot_body')
+    formSubmit.addEventListener('submit', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      const userMessageForm = formSubmit['userMessage'].value
+      // console.log(formSubmit['userMessage'].value)
+
+      var messageHTML = `
+            <span>${userMessageForm}</span>
+                    `;
+      var mydiv = document.createElement('div')
+      mydiv.classList.add('message')
+      mydiv.innerHTML = messageHTML
+      messageWrapper.appendChild(mydiv)
+
+// voice
+    //   let synth = speechSynthesis,
+    // isSpeaking = true;
+    // voices();
+    // function voices(e){
+    //     for(let voice of synth.getVoices()){
+    //         let selected = voice.name === "Microsoft David - English (United States)" ? "selected" : "";
+    //         console.log(voice.name)
+    //     }
+    // }
+    // synth.addEventListener("voiceschanged", voices);
+    // function textToSpeech(text){
+    //     let utterance = new SpeechSynthesisUtterance(text);
+    //     for(let voice of synth.getVoices()){
+    //         if(voice.name === "Microsoft David - English (United States)"){
+    //             utterance.voice = voice;
+    //         }
+    //     }
+    //     synth.speak(utterance);
+    // }
+    //   if(!synth.speaking){
+    //             textToSpeech(content.textContent);
+    //         }
+    //         if(content.textContent.length > 80){
+    //             setInterval(()=>{
+    //                 if(!synth.speaking && !isSpeaking){
+    //                     isSpeaking = true;
+    //                 }else{
+    //                 }
+    //             }, 500);
+    //             if(isSpeaking){
+    //                 synth.resume();
+    //                 isSpeaking = false;
+    //             }else{
+    //                 synth.pause();
+    //                 isSpeaking = true;
+    //             }
+    //         }else{
+    //         }
+
+
+
+      formSubmit.reset();
+      console.log('submitted')
+    })
+
+
 
 </script>
 <script type="text/javascript" id="gwt-pst">
