@@ -30,164 +30,7 @@
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
      <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
 
-     <style>
-       .main .content p{
-          font-size: 18px;
-          margin: 0;
-          margin-bottom: 1px;
-       }
-       .main .content p:nth-child(2){
-         margin-bottom: 20px;
-       }
-       .main .content p:nth-child(3){
-         font-weight: bold;
-       }
-       .main .image_wrapper{
-         padding: 20px;
-         background: rgb(219, 219, 219);
-         max-width: 1200px;
-         margin: 0 auto;
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         grid-template-rows: auto auto;
-         grid-gap: 20px;
-       }
-       .main .image_wrapper .ccb_image img{
-        height: auto;
-        width: 100%;
-       }
-       .main .chatbot_container{
-        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-          margin-bottom: 50px;
-          padding-bottom: 10px;
-          border-bottom-left-radius: 15px;
-          border-bottom-right-radius: 15px;
-       }
-       .main .chatbot_container .chatbot_header{
-        justify-self: flex-start;
-          display: flex;
-          align-items: center;
-          background: #000066;
-          background-size: 100% calc(100% + 12px);
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
-          padding: 20px;
-       }
-       .main .chatbot_container .chatbot_header img{
-        height: auto;
-        width: 60px;
-       }
-       .main .chatbot_container .chatbot_header p{
-         font-family: Arial, Helvetica, old;
-         font-weight: bold;
-         margin: 0;
-         margin-left: 15px;
-         color: #fff;
-         font-size: 20px;
-       }
-       .main .chatbot_container .chatbot_body{
-        padding: 0 28px;
-        width: 100%;
-        height: 357px;
-        overflow: hidden auto;
-        background: rgb(255, 255, 255);
-        transition: all 0.9s ease 0s;
-        max-height: 357px;
-        min-height: 160px;
-
-       }
-       @keyframes fadeMessage {
-          from {
-            transform-origin: left;
-             transform: translateX(-30px) rotate(90deg) ;
-            visibility: hidden;
-            opacity: 0;
-          }
-
-          to {
-            visibility: visible;
-            opacity: 1;
-            transform: translateX(0px) rotate(0deg) ;
-          }
-       }
-       .main .chatbot_container .chatbot_body .choices{
-        margin-top: 10px;
-       }
-       .main .chatbot_container .chatbot_body .choices span{
-        margin-top: 5px;
-        color: rgb(24, 24, 24);
-        border: 1px solid #000066;
-        background: rgb(241, 241, 241);
-        cursor: pointer;
-        margin-right:3px;
-        transition: 0.3s ease-in-out;
-       }
-       .main .chatbot_container .chatbot_body .choices span:hover{
-        background: #000066;
-        color: #fff;
-       }
-       .main .chatbot_container .chatbot_body .message{
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 10px;
-        transition: 0.5s ease-in-out;
-        position: relative;
-      }
-
-       .main .chatbot_container .chatbot_body span{
-        position: absolute;
-        padding: 10px 16px;
-        border-radius: 20px;
-        margin: 2px 0px;
-        font-size: 15px;
-        line-height: 20px;
-        overflow-wrap: break-word;
-        display: inline-block;
-        max-width: 85%;
-        clear: both;
-        position: relative;
-        transition: margin 0.28s ease-in-out 0s;
-        background: #000066;
-        color: #fff;
-        animation: fadeMessage 0.3s ease-in-out;
-       }
-       .main .chatbot_container .submit_wrapper{
-        margin-top: 10px;
-        padding: 0px 0px 6px;
-        margin: 0 28px;
-        border-top: 1px solid rgb(224, 224, 224);
-       }
-       .main .chatbot_container .submit_wrapper form{
-        margin-top: 12px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       }
-       .main .chatbot_container .submit_wrapper .text{
-        border: 0px;
-        width: 100%;
-        font-size: 17px;
-        padding: 20px 0px;
-        resize: none;
-        line-height: 24px;
-        overflow-x: hidden;
-
-        outline: none;
-       }
-       .main .chatbot_container .submit_wrapper .button{
-        background: #000066;
-        /* pointer-events: none; */
-        /* background: #777777; */
-        border: none;
-        outline: none;
-        color: #fff;
-        font-weight: bold;
-        padding: 7px 23px;
-        border-radius: 50px;
-       }
-
-
-     </style>
+     <link rel="stylesheet" href="./css/thQADi.css">
 
 </head>
 <body >
@@ -426,20 +269,58 @@
      
                 </form>
               </div>
-              <div class="col-md-6 d-flex flex-column">
+              <div class="col-md-6 d-flex flex-column right">
+            
                 <div class="chatbot_container">
+                  <div class="chatbot_start">
+                    <div class="chatbot_start_wrapper">
+                        <img src="./img/Untitled48_20221006094251.png" alt="">
+                        <span class="click_me">
+                          <h3>Hi There!</h3>                   
+                          <h3>Click</h3>
+                          <h3>to Chat with us</h3>                   
+
+                        </span>
+                    </div>
+  
+                  </div>
+
                   <div class="chatbot_header">
-                    <img src="./img/robot.png" alt="">
+                    <img src="./img/Untitled48_20221006094251.png" alt="">
                     <p>Hi there! Welcome to QAD</p>
                   </div>
                   <div class="chatbot_body">
-                    <div class="choices">
-                      <span class="choices_span">New Government Permit</span>
-                      <span class="choices_span">Renewal of Government Permit Application</span>
-                      <span class="choices_span">Government Recognition Application</span>
-                      <span class="choices_span">Tuition and Other Fees Increase Application</span>
-                      <span class="choices_span">Request for Temporary and Permanent Closure</span>
+                    <div class="myspan">
+                      <!-- <div class="bot_message hide">
+                        <span class="bot">
+                          Good Day
+                        </span>
+                      </div>
+                      <div class="bot_message hide">
+                        
+                        <span class="bot">
+                          How can I help you
+                        </span>
+                      </div>
+                      <div class="choices hide d-flex flex-column align-items-start">
+                        <span class="choices_span">What is QAD</span>
+                        <span class="choices_span">Services offered by QAD</span>
+                        <span class="choices_span">Issuances</span>
+                        <span class="choices_span">Downloadable Forms</span>
+                        <span class="choices_span">Send us Feedback</span>
+                      </div> -->
+                   
+                      <div class="message_wrapper">
+  
+                      
+                      </div>
+                      <div class="snippet" data-title=".dot-typing">
+                        <div class="stage">
+                          <div class="dot-typing"></div>
+                        </div>
+                      </div>
                     </div>
+              
                   </div>
                   <div class="submit_wrapper">
                     <form id="messageForm">
@@ -599,6 +480,7 @@
 
     const formSubmit = document.querySelector("#messageForm")
     const messageWrapper = document.querySelector('.chatbot_body')
+    const messagemessWrapper = document.querySelector('.message_wrapper')
     formSubmit.addEventListener('submit', (e) => {
       e.stopPropagation();
       e.preventDefault();
@@ -611,54 +493,27 @@
       var mydiv = document.createElement('div')
       mydiv.classList.add('message')
       mydiv.innerHTML = messageHTML
-      messageWrapper.appendChild(mydiv)
-
-// voice
-    //   let synth = speechSynthesis,
-    // isSpeaking = true;
-    // voices();
-    // function voices(e){
-    //     for(let voice of synth.getVoices()){
-    //         let selected = voice.name === "Microsoft David - English (United States)" ? "selected" : "";
-    //         console.log(voice.name)
-    //     }
-    // }
-    // synth.addEventListener("voiceschanged", voices);
-    // function textToSpeech(text){
-    //     let utterance = new SpeechSynthesisUtterance(text);
-    //     for(let voice of synth.getVoices()){
-    //         if(voice.name === "Microsoft David - English (United States)"){
-    //             utterance.voice = voice;
-    //         }
-    //     }
-    //     synth.speak(utterance);
-    // }
-    //   if(!synth.speaking){
-    //             textToSpeech(content.textContent);
-    //         }
-    //         if(content.textContent.length > 80){
-    //             setInterval(()=>{
-    //                 if(!synth.speaking && !isSpeaking){
-    //                     isSpeaking = true;
-    //                 }else{
-    //                 }
-    //             }, 500);
-    //             if(isSpeaking){
-    //                 synth.resume();
-    //                 isSpeaking = false;
-    //             }else{
-    //                 synth.pause();
-    //                 isSpeaking = true;
-    //             }
-    //         }else{
-    //         }
+      messagemessWrapper.appendChild(mydiv)
 
 
+      var element = document.querySelector(".myspan");
+      element.scrollTop = element.scrollHeight;
 
       formSubmit.reset();
       console.log('submitted')
-    })
 
+    })
+    const bot_start = document.querySelector('.chatbot_start')
+      bot_start.addEventListener('click', () => {
+        bot_start.classList.toggle('active')
+        var messageBotHTML = `
+            <span>im qad bot</span>
+         `;
+        var botReplyDiv = document.createElement('div')
+        botReplyDiv.classList.add('bot_message')
+        botReplyDiv.innerHTML = messageBotHTML
+        messagemessWrapper.appendChild(botReplyDiv)
+      })
 
 
 </script>
