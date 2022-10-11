@@ -340,8 +340,9 @@ canvas{display:block;vertical-align:bottom}
     width: 100%;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 250px 250px 170px 1fr;
-    column-gap: 0px;
+    /* grid-template-columns: 250px 250px 170px 1fr; */
+    /* grid-template-columns: 250px 250px 170px 1fr; */
+    column-gap: 10px;
 }
 .main #footer .footer_content .rep,
 .main #footer .footer_content .about,

@@ -503,6 +503,12 @@
       console.log('submitted')
 
     })
+
+    const runQadBot = () => {
+      setTimeout( () => { 
+        console.log('run!')
+      }, 5000);
+    }
     const bot_start = document.querySelector('.chatbot_start')
       bot_start.addEventListener('click', () => {
         bot_start.classList.toggle('active')
@@ -513,6 +519,8 @@
         botReplyDiv.classList.add('bot_message')
         botReplyDiv.innerHTML = messageBotHTML
         messagemessWrapper.appendChild(botReplyDiv)
+
+        runQadBot()
       })
 
 
