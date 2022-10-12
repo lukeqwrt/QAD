@@ -223,6 +223,15 @@ canvas{display:block;vertical-align:bottom}
 
 }
 /* slider */
+.main #slider{
+    height: 65VH;
+}
+
+@media screen and (max-width: 1200px){
+    .main #slider{
+        height: 45vh;
+}
+}
 .main #slider .carousel-item{
     /* height: 300px; */
     width: 100%;
@@ -419,3 +428,4 @@ canvas{display:block;vertical-align:bottom}
     .dropdown-menu > li:hover > #dropdown_spes{
     display: block;
     }
+
