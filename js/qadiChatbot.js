@@ -24,197 +24,7 @@ formSubmit.addEventListener('submit', (e) => {
   console.log('submitted')
 
   if(userMessageForm == "Issuances"){
-    choices();
-  }
-  function choices() {
-    setTimeout(() => { 
-        var messageBotHTML = `
-        <ul class="choices p-0 m-0 w-100 d-flex flex-column align-items-start justify-content-center">
-            <span class="choices_span">What is QAD</span>
-            <span class="choices_span">Services offered by QAD</span>
-            <span class="choices_span">Issuances</span>
-            <span class="choices_span">Downloadable Forms</span>
-            <span class="choices_span">Send us Feedback</span>
-        </ul> 
-        `;
-        var botReplyDiv = document.createElement('div')
-        botReplyDiv.classList.add('bot_message')
-        botReplyDiv.innerHTML = messageBotHTML;
-        messagemessWrapper.appendChild(botReplyDiv)
-        snippet.style.display = "none"
-        element.scrollTop = element.scrollHeight;
-        const choices_span = botReplyDiv.querySelectorAll('.choices_span')
-        choices_span.forEach(i => {
-            i.addEventListener('click', (e) => {
-                setTimeout(() => { 
-                    var messageBotHTML = `<span>${e.target.textContent}</span> `;
-                    var botReplyDiv = document.createElement('div')
-                    botReplyDiv.classList.add('message')
-                    botReplyDiv.innerHTML = messageBotHTML;
-                    messagemessWrapper.appendChild(botReplyDiv)
-                    snippet.style.display = "none"
-                    element.scrollTop = element.scrollHeight;
-                });
-                if(e.target.textContent == "Issuances"){
-                    setTimeout(() => { 
-                        snippet.style.display = "block"
-                        element.scrollTop = element.scrollHeight;
-                      }, 1000)
-                    setTimeout(() => { 
-                        var messageBotHTML = `
-                        <ul class="choices p-0 m-0 w-100 d-flex flex-column align-items-start justify-content-center">
-                            <span class="choices_span">National</span>
-                        </ul> 
-                        `;
-                        var botReplyDiv = document.createElement('div')
-                        botReplyDiv.classList.add('bot_message')
-                        botReplyDiv.innerHTML = messageBotHTML;
-                        messagemessWrapper.appendChild(botReplyDiv)
-                        snippet.style.display = "none"
-                        element.scrollTop = element.scrollHeight;
-    
-                        const div = botReplyDiv.querySelector('.choices_span')
-                        div.addEventListener('click', () => {
-                            setTimeout(() => { 
-                                snippet.style.display = "block"
-                                element.scrollTop = element.scrollHeight;
-                              }, 1000)
-                            setTimeout(() => { 
-                                var messageBotHTML = `<span>National</span> `;
-                                var botReplyDiv = document.createElement('div')
-                                botReplyDiv.classList.add('message')
-                                botReplyDiv.innerHTML = messageBotHTML;
-                                messagemessWrapper.appendChild(botReplyDiv)
-                                snippet.style.display = "none"
-                                element.scrollTop = element.scrollHeight;
-                            },2000);
-                            setTimeout(() => { 
-                                snippet.style.display = "block"
-                                element.scrollTop = element.scrollHeight;
-                            }, 3000)
-                            setTimeout(() => { 
-                                var messageBotHTML = `<span>IKLIK ANG LINK NA ITO PARA MAPUNTA SA WEBSITE</span> `;
-                                var botReplyDiv = document.createElement('div')
-                                botReplyDiv.classList.add('bot_message')
-                                botReplyDiv.innerHTML = messageBotHTML;
-                                messagemessWrapper.appendChild(botReplyDiv)
-                                snippet.style.display = "none"
-                                element.scrollTop = element.scrollHeight;
-                            },4000);
-                            setTimeout(() => { 
-                                snippet.style.display = "block"
-                                element.scrollTop = element.scrollHeight;
-                            }, 5000)
-                            setTimeout(() => { 
-                                var messageBotHTML = `<span><a href="./issuancesPage/depedOrders.html" target="_blank">https://qad-depedncr.netlify.app/issuancespage/depedorders</a></span> `;
-                                var botReplyDiv = document.createElement('div')
-                                botReplyDiv.classList.add('bot_message')
-                                botReplyDiv.innerHTML = messageBotHTML;
-                                messagemessWrapper.appendChild(botReplyDiv)
-                                snippet.style.display = "none"
-                                element.scrollTop = element.scrollHeight;
-                            },6000);
-                            setTimeout(() => { 
-                                snippet.style.display = "block"
-                                element.scrollTop = element.scrollHeight;
-                            }, 11000);
-                            setTimeout(() => { 
-                                var messageBotHTML = `<span>Do you have any concern?</span> `;
-                                var botReplyDiv = document.createElement('div')
-                                botReplyDiv.classList.add('bot_message')
-                                botReplyDiv.innerHTML = messageBotHTML;
-                                messagemessWrapper.appendChild(botReplyDiv)
-                                snippet.style.display = "none"
-                                element.scrollTop = element.scrollHeight;
-                            },12000);
-                            setTimeout(() => { 
-                                snippet.style.display = "block"
-                                element.scrollTop = element.scrollHeight;
-                            }, 13000);
-                            setTimeout(() => { 
-                                var messageBotHTML = `
-                                <ul class="choices p-0 m-0 w-100 d-flex flex-column align-items-start justify-content-center">
-                                    <span class="choices_span">Yes</span>
-                                    <span class="choices_span">No</span>
-                                </ul> 
-                                `;
-                                var botReplyDiv = document.createElement('div')
-                                botReplyDiv.classList.add('bot_message')
-                                botReplyDiv.innerHTML = messageBotHTML;
-                                messagemessWrapper.appendChild(botReplyDiv)
-                                snippet.style.display = "none"
-                                element.scrollTop = element.scrollHeight;
-    
-                                const div = botReplyDiv.querySelectorAll('.choices_span')
-                                div.forEach(i => {
-                                    i.addEventListener('click', (e) => {
-                                        if(e.target.textContent == "Yes"){
-                                            setTimeout(() => { 
-                                                var messageBotHTML = `<span>Yes</span> `;
-                                                var botReplyDiv = document.createElement('div')
-                                                botReplyDiv.classList.add('message')
-                                                botReplyDiv.innerHTML = messageBotHTML;
-                                                messagemessWrapper.appendChild(botReplyDiv)
-                                                snippet.style.display = "none"
-                                                element.scrollTop = element.scrollHeight;
-                                            });
-                                            setTimeout(() => { 
-                                                choices();
-                                            }, 1000);
-                                 
-                                        }else if(e.target.textContent == "No"){
-                                            setTimeout(() => { 
-                                                var messageBotHTML = `<span>No</span> `;
-                                                var botReplyDiv = document.createElement('div')
-                                                botReplyDiv.classList.add('message')
-                                                botReplyDiv.innerHTML = messageBotHTML;
-                                                messagemessWrapper.appendChild(botReplyDiv)
-                                                snippet.style.display = "none"
-                                                element.scrollTop = element.scrollHeight;
-                                            });
-                                            setTimeout(() => { 
-                                                snippet.style.display = "block"
-                                                element.scrollTop = element.scrollHeight;
-                                            }, 1000);
-                                            setTimeout(() => { 
-                                                var messageBotHTML = `<span>Thankyou !!! 😁</span> `;
-                                                var botReplyDiv = document.createElement('div')
-                                                botReplyDiv.classList.add('bot_message')
-                                                botReplyDiv.innerHTML = messageBotHTML;
-                                                messagemessWrapper.appendChild(botReplyDiv)
-                                                snippet.style.display = "none"
-                                                element.scrollTop = element.scrollHeight;
-                                            },2000);
-                                        }
-                                    })
-                                })
-                            }, 14000)
-                  
-                        })
-                      }, 2000)
-                      setTimeout(() => { 
-                        snippet.style.display = "block"
-                        element.scrollTop = element.scrollHeight;
-                      }, 3000)
-                      setTimeout(() => { 
-                        var messageBotHTML = `
-                        <ul class="choices p-0 m-0 w-100 d-flex flex-column align-items-start justify-content-center">
-                            <span class="choices_span">Regional</span>
-                        </ul> 
-                        `;
-                        var botReplyDiv = document.createElement('div')
-                        botReplyDiv.classList.add('bot_message')
-                        botReplyDiv.innerHTML = messageBotHTML;
-                        messagemessWrapper.appendChild(botReplyDiv)
-                        snippet.style.display = "none"
-                        element.scrollTop = element.scrollHeight;
-                      }, 4000)
-                }
-            })
-        })
-
-
-      });
+    console.log("Issuances")
   }
 })
 const snippet = document.querySelector('.snippet');
@@ -296,14 +106,24 @@ const runQadBot = () => {
     
                         const div = botReplyDiv.querySelector('.choices_span')
                         div.addEventListener('click', () => {
-                            setTimeout(() => { 
-                                snippet.style.display = "block"
-                                element.scrollTop = element.scrollHeight;
-                              }, 1000)
+                       
                             setTimeout(() => { 
                                 var messageBotHTML = `<span>National</span> `;
                                 var botReplyDiv = document.createElement('div')
                                 botReplyDiv.classList.add('message')
+                                botReplyDiv.innerHTML = messageBotHTML;
+                                messagemessWrapper.appendChild(botReplyDiv)
+                                snippet.style.display = "none"
+                                element.scrollTop = element.scrollHeight;
+                            });
+                            setTimeout(() => { 
+                                snippet.style.display = "block"
+                                element.scrollTop = element.scrollHeight;
+                            }, 1000)
+                            setTimeout(() => { 
+                                var messageBotHTML = `<span>IKLIK ANG LINK NA ITO PARA MAPUNTA SA WEBSITE</span> `;
+                                var botReplyDiv = document.createElement('div')
+                                botReplyDiv.classList.add('bot_message')
                                 botReplyDiv.innerHTML = messageBotHTML;
                                 messagemessWrapper.appendChild(botReplyDiv)
                                 snippet.style.display = "none"
@@ -314,7 +134,7 @@ const runQadBot = () => {
                                 element.scrollTop = element.scrollHeight;
                             }, 3000)
                             setTimeout(() => { 
-                                var messageBotHTML = `<span>IKLIK ANG LINK NA ITO PARA MAPUNTA SA WEBSITE</span> `;
+                                var messageBotHTML = `<span><a href="./issuancesPage/depedOrders.html" target="_blank">https://qad-depedncr.netlify.app/issuancespage/depedorders</a></span> `;
                                 var botReplyDiv = document.createElement('div')
                                 botReplyDiv.classList.add('bot_message')
                                 botReplyDiv.innerHTML = messageBotHTML;
@@ -325,20 +145,7 @@ const runQadBot = () => {
                             setTimeout(() => { 
                                 snippet.style.display = "block"
                                 element.scrollTop = element.scrollHeight;
-                            }, 5000)
-                            setTimeout(() => { 
-                                var messageBotHTML = `<span><a href="./issuancesPage/depedOrders.html" target="_blank">https://qad-depedncr.netlify.app/issuancespage/depedorders</a></span> `;
-                                var botReplyDiv = document.createElement('div')
-                                botReplyDiv.classList.add('bot_message')
-                                botReplyDiv.innerHTML = messageBotHTML;
-                                messagemessWrapper.appendChild(botReplyDiv)
-                                snippet.style.display = "none"
-                                element.scrollTop = element.scrollHeight;
-                            },6000);
-                            setTimeout(() => { 
-                                snippet.style.display = "block"
-                                element.scrollTop = element.scrollHeight;
-                            }, 11000);
+                            }, 9000);
                             setTimeout(() => { 
                                 var messageBotHTML = `<span>Do you have any concern?</span> `;
                                 var botReplyDiv = document.createElement('div')
@@ -347,11 +154,11 @@ const runQadBot = () => {
                                 messagemessWrapper.appendChild(botReplyDiv)
                                 snippet.style.display = "none"
                                 element.scrollTop = element.scrollHeight;
-                            },12000);
+                            },10000);
                             setTimeout(() => { 
                                 snippet.style.display = "block"
                                 element.scrollTop = element.scrollHeight;
-                            }, 13000);
+                            }, 11000);
                             setTimeout(() => { 
                                 var messageBotHTML = `
                                 <ul class="choices p-0 m-0 w-100 d-flex flex-column align-items-start justify-content-center">
@@ -380,8 +187,12 @@ const runQadBot = () => {
                                                 element.scrollTop = element.scrollHeight;
                                             });
                                             setTimeout(() => { 
-                                                choices();
+                                                snippet.style.display = "block"
+                                                element.scrollTop = element.scrollHeight;
                                             }, 1000);
+                                            setTimeout(() => { 
+                                                choices();
+                                            }, 2000);
                                  
                                         }else if(e.target.textContent == "No"){
                                             setTimeout(() => { 
@@ -409,7 +220,7 @@ const runQadBot = () => {
                                         }
                                     })
                                 })
-                            }, 14000)
+                            }, 12000)
                   
                         })
                       }, 2000)
