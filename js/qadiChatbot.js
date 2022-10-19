@@ -250,13 +250,14 @@ const runQadBot = () => {
                                         element.scrollTop = element.scrollHeight;
                                     },1000)
                                     setTimeout(() => { 
-                                        var messageBotHTML = `<span>IKLIK ANG LINK NA ITO PARA MAPUNTA SA WEBSITE</span> `;
+                                        var messageBotHTML = `<span>Click this link to redirect.</span> `;
                                         var botReplyDiv = document.createElement('div')
                                         botReplyDiv.classList.add('bot_message')
                                         botReplyDiv.innerHTML = messageBotHTML;
                                         messagemessWrapper.appendChild(botReplyDiv)
                                         snippet.style.display = "none"
                                         element.scrollTop = element.scrollHeight;
+                                        speakBot(messageBotHTML);
                                     },2000);
                                     setTimeout(() => { 
                                         snippet.style.display = "block"
@@ -283,6 +284,7 @@ const runQadBot = () => {
                                         messagemessWrapper.appendChild(botReplyDiv)
                                         snippet.style.display = "none"
                                         element.scrollTop = element.scrollHeight;
+                                        speakBot(messageBotHTML);
                                     },10000);
                                     setTimeout(() => { 
                                         snippet.style.display = "block"
@@ -341,6 +343,7 @@ const runQadBot = () => {
                                                         messagemessWrapper.appendChild(botReplyDiv)
                                                         snippet.style.display = "none"
                                                         element.scrollTop = element.scrollHeight;
+                                                        speakBot(messageBotHTML);
                                                     },2000);
                                                 }
                                             })

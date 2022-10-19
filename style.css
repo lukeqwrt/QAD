@@ -23,8 +23,25 @@ html{
     z-index: 99;
     /* background: #0F3460; */
     background: #Fff;
-}
+    display: flex;
+    justify-content: center;
+    position: a;
 
+}
+.main .mynav .nav_bar_nav .nav2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-reverse;
+}
+.main .mynav .nav2{
+    /* position: relative; */
+}
+.main .mynav li{
+    /* position: absolute; */
+    list-style: none;
+    right: 0px;
+}
 .main .mynav .logo{
     font-family: Arial, Helvetica, sans-serif !important;
     color: #fff;
@@ -116,9 +133,7 @@ color: #fff;
 }
 
 .navbar-nav{
-    display: flex;
-    justify-content: space-between;
-     align-items: center;
+
 }
 .main .navbar-nav li:nth-child(8){
     margin-left: auto;
@@ -166,6 +181,17 @@ color: #fff;
 .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
+    animation: visible 0.3s ease-in-out;
+ }
+ @keyframes visible {
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
  }
 /* #particles-js .content h3{
     margin-bottom: 15px;
@@ -413,7 +439,7 @@ canvas{display:block;vertical-align:bottom}
     margin-left: 10px;
 }
 .dropdown-menu li {
-    position: relative;
+    /* position: relative; */
     }
     .dropdown-menu #dropdown_spes {
     display: none;
@@ -426,6 +452,72 @@ canvas{display:block;vertical-align:bottom}
     left: auto;
     }
     .dropdown-menu > li:hover > #dropdown_spes{
-    display: block;
+    /* display: block; */
     }
 
+
+    @media screen and (max-width: 992px) {
+        .main .mynav .nav_bar_nav .nav2{
+            display: unset;
+            justify-content: center;
+            align-items: center;
+        }
+        .main .mynav{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            /* position: unset !important; */
+            z-index: 99;
+            /* background: #0F3460; */
+            background: #Fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .main .mynav li{
+            justify-self: center;
+            /* position: absolute; */
+            list-style: none;
+            /* margin: auto 0; */
+        }
+        .main .mynav .nav_bar_nav{
+            width: 100%;
+            display: unset;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .mynav .nav2 .mybutton{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main .mynav .navbar-toggler.collapsed.show{
+            margin-top: 1rem;
+        }
+        #landing .brand .top_brand h3{
+            font-size: 29px;
+        }
+        #landing .brand .my_guhit{
+            width: 100%;
+            max-width: 352px;
+            height: 2px;
+            display: block;
+            background: #fff;
+            transform: translate(0px, -4px);
+         }
+         .navbar-nav li{
+         }
+
+         .dropdown:hover .dropdown-menu.active{
+            display: unset;
+            margin-top: 0;
+            animation: unset;
+         }
+         @keyframes visibleMobile {
+            0%{
+                height: 0px;
+            }
+            100%{
+                height: 100%;
+            }
+         }
+    }
