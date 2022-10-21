@@ -70,100 +70,113 @@
 
     <div class="main">
      
-      <nav class="mynav navbar navbar-expand-lg navbar-light p-0">
-        <div class="d-flex flex-column w-100 ">
-          <div class="nav2 px-4 px-lg-5 py-0">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+      <nav class="mynav navbar navbar-expand-xl navbar-light p-0 px-3 px-md-4 px-lg-5 py-3">
+        <div class="nav_bar_nav">
+          <div class="nav2 ">
+            <div class="mybutton">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+            </div>
+        
             <div class="collapse navbar-collapse" id="navbarNav">
               <div class="time">
                 <!-- <p>time</p> -->
               </div>
-              <ul class="navbar-nav container text-white w-100"> 
-                <li class="nav-item ms-auto me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+              <ul class="navbar-nav text-white w-100"> 
+                <li class="nav-item me-0 mt-3 mt-lg-0 mb-2 mb-lg-0 me-lg-2 me-lg-3">
                   <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                 </li>
-                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#About" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
                     About
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./about.html">About the Region</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html#Organizational">About Us</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Programs and Projects</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Transparency</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./about.html">Data Privacy Notice</a></li>
-                  </ul>
+                  <div class="collapse" id="About" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="list_blue"><a class="dropdown-item dropdown-item-dark" href="./about.html">About the Region</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./about.html#Organizational">About Us</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./about.html">Programs and Projects</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./about.html">Transparency</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./about.html">Data Privacy Notice</a></li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#pRiMe" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
                     pRiMe Services
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./services.html">New Government Permit Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Renewal of Government Permit Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Government Recognition Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Tuition and Other Fees Increase Application</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Temporary and Permanent Closure</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Certifications</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Special Order</a></li>
-                  </ul>
+                  <div class="collapse" id="pRiMe" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./services.html">New Government Permit Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./services.html">Renewal of Government Permit Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./services.html">Government Recognition Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./services.html">Tuition and Other Fees Increase Application</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Temporary and Permanent Closure</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Certifications</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./services.html">Request for Special Order</a></li>
+                    </ul>
+                  </div>
                 </li>
-              
-                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#Issuances" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
                     Issuances
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        National &raquo;
-                      </a>
-                      <ul id="dropdown_spes" class="dropdown-menu dropdown-submenu ">
-                        <li>
-                            <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="./issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <!-- <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li> -->
-                    <li class="list_blue"><a class="dropdown-item" href="./issuancesPage/regional.html">Regional</a></li>
-                  </ul>
+                  <div class="collapse" id="Issuances" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="myli">
+                        <a class="dropdown-item national" data-bs-toggle="collapse" data-bs-target="#dropdown_child">
+                          National &raquo;
+                        </a>
+                        <div class="collapse" id="dropdown_child" style="transition: 0.3s ease;">
+                          
+                          <ul id="dropdown_spes" class=" dropdown-submenu ">
+                            <li>
+                                <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuancesPage/depedOrders.html">DepEd Orders related to QAD</a></li>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="./issuancesPage/depedMemoranda.html">DepEd Memoranda related to QAD</a>
+                            </li>
+                          </ul>
+                        </div>
+                    
+                      </li>
+                      <!-- <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./issuances.html">National</a></li> -->
+                      <li class="list_blue"><a class="dropdown-item" href="./issuancesPage/regional.html">Regional</a></li>
+                    </ul>
+                  </div>
                 </li>
-                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
+          
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#Resources" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
                     Resources
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./resources.html">DepEd TV</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Facts and Figures</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./resources.html">Downloadable Files and Forms</a></li>
-                  </ul>
+                  <div class="collapse" id="Resources" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./resources.html">DepEd TV</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./resources.html">Facts and Figures</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./resources.html">Downloadable Files and Forms</a></li>
+                    </ul>
+                  </div>
                 </li>
-
-                <li class="nav-item dropdown me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                  <a class="nav-link" href="" id="navbarDarkDropdownMenuLink"aria-expanded="false">
-                     The QAD-i
+                <li class="nav-item dropdown me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
+                  <a class="nav-link P-0" data-bs-toggle="collapse" data-bs-target="#qadi" href="" id="navbarDarkDropdownMenuLink"aria-describedby="false">
+                    The QAD-i
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./theQADi.html">Feedback</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Citizen Client Satisfaction Survey</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Regional Directory</a></li>
-                    <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Division Directory</a></li>
-                  </ul>
+                  <div class="collapse" id="qadi" style="transition: 0.3s ease;">
+                    <ul class="p-0" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li class="list_blue" ><a class="dropdown-item dropdown-item-dark" href="./theQADi.html">Feedback</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScn8NxMYLJI4O1imG_-cMhwNSf0I6pUtT7iXegLxjH5t573gg/formrestricted" target="_blank">i-Share Participation Tool</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdRgF48suae9-I9Ih81Pa6XA8YyY91EBu_Z0rbPuDVTLTmpSQ/viewform?fbclid=IwAR2Bwnj7jVwbGsrzEzZOnZEDJgtqy4Fp-11zjOufTMipiNNOV3FNwWPX_t0">Client Satisfaction Survey</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Regional Directory</a></li>
+                      <li class="list_blue"><a class="dropdown-item" href="./theQADi.html">Division Directory</a></li>
+                    </ul>
+                  </div>
                 </li>
-
-                <li class="nav-item  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
+                <li class="nav-item  me-0 mt-0 mt-lg-0 mb-2 mb-lg-0 me-0 mb-lg-0 me-lg-2 me-lg-3">
                   <a class="nav-link active" aria-current="page" href="./faqs.html">How To</a>
                 </li>
-                <li class="nav-item justify-content-lg-end flex-grow-last  me-0 mt-3 mt-lg-0 mb-3 mb-lg-0 me-0 mb-3 mb-lg-0 me-lg-2 me-lg-3">
-                 <input class="px-1" type="text" placeholder="Search">
-                </li>
-
+        
                 <!-- <div class="accounts d-flex flex-end">
                   <li class="logged-in-admin nav-item me-0 mb-3 mb-lg-0 me-md-3 mx-lg-2 me-lg-3">
                     <a class="nav-link active" aria-current="page" href="./admin/admin_dashboard.html">Dashboard</a>
@@ -186,19 +199,22 @@
                     </ul>
                   </div>
                 </div> -->
-       
-            
                 <!-- <li id="account" class="nav-item logged-in px-0">
                   <a class="nav-link modal-trigger" data-toggle="displayAccount" data-target="displayAccount" href="#" style="display:none;">Account</a>
                 </li> -->
-             
                 <!-- <li class="nav-item logged-in px-0">
                   <a class="nav-link modal-trigger" data-toggle="modal" data-target="#loginmodal" href="#">Logout</a>
                 </li> -->
               </ul>
             </div>
+
+    
           </div>
+          <li class="nav-item search">
+            <input class="px-1" type="text" placeholder="Search">
+           </li>
         </div>
+      
     </nav>
     <div class="site-map">
       <p>YOU ARE HERE. THE QAD</p>
