@@ -463,7 +463,6 @@ canvas{display:block;vertical-align:bottom}
         }
         .dropdown:hover .collapse{
             pointer-events: auto;
-
             position: absolute;
             z-index: 1000;
             display: block;
