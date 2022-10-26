@@ -140,7 +140,9 @@ color: #fff;
     width: 100%;
     left: 0;
 }
-
+.main #navbarNav{
+    transition: 0.3s ease-in-out;
+}
 .navbar-nav{
 
 }
