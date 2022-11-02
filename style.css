@@ -11,12 +11,6 @@ html{
 }
 
 /* header */
-#landing #qad_logo{
-    height: 30px;
-    width: auto;
-    margin-right: 10px;
-    cursor: pointer;
-}
 .main .mynav{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     position: unset !important;
@@ -75,11 +69,7 @@ html{
     font-size: 14px;
 }
 
-.main #qad_logo{
-    height: 30px;
-    width: auto;
-    margin-right: 10px;
-}
+
 #landing #qad_logo{
     height: 110px;
     width: auto;
@@ -102,7 +92,9 @@ font-size: 28px;
     font-family: 'Old English Five', sans-serif;
                                                 
 }
-
+canvas{
+    position: absolute;
+}
 
 #landing .brand .top_brand h3{
     font-size: 34px;
@@ -126,7 +118,10 @@ color: #fff;
     transform: translate(0,1px);
     font-size: 20px;
 }
-
+#landing .mobile_column .date{
+    margin: 0;
+    margin-left: auto;
+}
 .main #forms li{
     list-style: none;
 
@@ -392,7 +387,7 @@ canvas{display:block;vertical-align:bottom}
     grid-auto-flow: column;
     /* grid-template-columns: 250px 250px 170px 1fr; */
     /* grid-template-columns: 250px 250px 170px 1fr; */
-    column-gap: 10px;
+    column-gap: 20px;
 }
 .main #footer .footer_content .rep,
 .main #footer .footer_content .about,
@@ -448,6 +443,7 @@ canvas{display:block;vertical-align:bottom}
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 .main #footer .footer_content .logos div:nth-child(4),
 .main #footer .footer_content .logos div:nth-child(3){
@@ -609,4 +605,117 @@ canvas{display:block;vertical-align:bottom}
             }
          }
     }
-    
+      
+    /* nav */
+    @media screen and (max-width: 904px) {
+        #particles-js {
+            text-align: center;
+            z-index: 0;
+            background: #000066;
+            height: 301px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #landing .mobile_column{
+            flex-direction: column;
+        }
+        #landing .mobile_column .date{
+            margin: 0 auto;
+            margin-top:15px;
+        }
+        #landing #qad_logo{
+            height: 80px;
+            width: auto;
+            margin-right: 0px;
+        }
+        #landing .brand{
+            margin-top: 15px;
+        }
+        #landing .brand .top_brand{
+            justify-content: center;
+        }
+        #landing .brand .top_brand h3{
+            font-size: 24px;
+        }
+        #landing .brand .my_guhit{
+            width: 100%;
+            max-width: unset;
+            height: 2px;
+            display: block;
+            background: #fff;
+            transform: translate(0px, -4px);
+         }
+    }
+
+    /* footer */
+    @media screen and (max-width: 993px) {
+        .main #footer .footer_content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            padding: 0 20px;    
+            column-gap: 30px;
+            row-gap: 50px;
+            grid-template-columns: 1fr;
+        }
+        .main #footer .footer_content .seal{
+            grid-row: 1/2;
+            grid-column: 1/3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main #footer .footer_content .seal img{
+            height: auto;
+            width: 50px;
+        }
+
+        .main #footer .footer_content .footer_details {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-auto-flow: row;
+            row-gap: 20px;
+            grid-row: 2/3;
+            grid-column: 1/3;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            /* padding: 0 20px; */
+        }
+        .main #footer .footer_content .last {
+            grid-column: 1/3;
+            grid-row: 3/4;
+        }
+    }
+
+
+
+    /* all */
+    @media screen and (max-width: 576px) {
+        #particles-js {
+            text-align: center;
+            z-index: 0;
+            background: #000066;
+            height: 381px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main #footer .footer_content .footer_details {
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px 200px 200px 120px;
+            grid-auto-flow: row;
+            row-gap: 20px;
+            grid-row: 2/3;
+            grid-column: 1/3;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            /* padding: 0 20px; */
+        }
+        
+    }
