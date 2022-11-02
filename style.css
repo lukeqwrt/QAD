@@ -719,6 +719,11 @@ canvas{display:block;vertical-align:bottom}
             max-width: 700px;
             margin: 0 auto;
             /* padding: 0 20px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         .main #footer .footer_content .logos {
             display: flex;
