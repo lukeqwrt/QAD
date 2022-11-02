@@ -705,9 +705,12 @@ canvas{display:block;vertical-align:bottom}
             justify-content: center;
             align-items: center;
         }
+        .main #footer .footer_content{
+            row-gap: 40px;
+        }
         .main #footer .footer_content .footer_details {
             grid-template-columns: 1fr;
-            grid-template-rows: 80px 200px 200px 120px;
+            grid-template-rows: 80px 200px 160px 77px;
             grid-auto-flow: row;
             row-gap: 20px;
             grid-row: 2/3;
@@ -717,5 +720,18 @@ canvas{display:block;vertical-align:bottom}
             margin: 0 auto;
             /* padding: 0 20px; */
         }
-        
+        .main #footer .footer_content .logos {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+        }
+        .main #footer .footer_content .logos img.small_logo {
+            height: 64px;
+            width: 82px;
+        }
+        .main #footer .footer_content .logos img {
+            height: auto;
+            width: 60px;
+        }
     }
