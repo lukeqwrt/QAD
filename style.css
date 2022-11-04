@@ -524,6 +524,7 @@ canvas{display:block;vertical-align:bottom}
                 align-items: center;
                 
             }
+
     }
 
 
@@ -647,6 +648,15 @@ canvas{display:block;vertical-align:bottom}
             background: #fff;
             transform: translate(0px, -4px);
          }
+         
+         .main #slider{
+            height: 36vh;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .main #slider{
+            height: 28vh;
+        }
     }
 
     /* footer */
@@ -689,8 +699,10 @@ canvas{display:block;vertical-align:bottom}
             grid-column: 1/3;
             grid-row: 3/4;
         }
+        .main #slider{
+            height: 30vh;
+        }
     }
-
 
 
     /* all */
@@ -738,5 +750,8 @@ canvas{display:block;vertical-align:bottom}
         .main #footer .footer_content .logos img {
             height: auto;
             width: 60px;
+        }
+        .main #slider{
+            height: 19vh;
         }
     }
