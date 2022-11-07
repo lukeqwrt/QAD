@@ -752,6 +752,6 @@ canvas{display:block;vertical-align:bottom}
             width: 60px;
         }
         .main #slider{
-            height: 19vh;
+            height:100%;
         }
     }
